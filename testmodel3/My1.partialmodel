@@ -25,4 +25,5 @@
     <psType xsi:type="partialmodel:VarType"/>
   </objects>
   <objects name="object4"/>
+  <objects name="object5"/>
 </partialmodel:PartialModel>
