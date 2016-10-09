@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="partialModel" version="11.0.0.201601261200">
+  <ownedViewpoints name="partialmodels" modelFileExtension="partialmodel">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="PartialModel Diagram" domainClass="partialmodel.PartialModel">
+      <defaultLayer name="Default">
+        <edgeMappings name="reference" sourceMapping="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']" targetMapping="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']" targetFinderExpression="feature:targetObject" sourceFinderExpression="feature:sourceObject" domainClass="partialmodel.PSReference" useDomainElement="true" reconnections="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='referenceTarget']">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelExpression="feature:name">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="aql: self.psType->size() = 1">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription labelExpression="aql: '('+ self.psType->first().eGet('Annotation')+') '+self.name">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.psType->size() = 2">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription labelExpression="aql: '('+ self.psType->first().eGet('Annotation')+', '+self.psType->last().eGet('Annotation')+') '+self.name">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.psType->size() = 3">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription labelExpression="aql: '('+self.psType->first().eGet('Annotation')+', '+self.psType->last().eGet('Annotation')+', '+self.psType->at(2).eGet('Annotation')+') '+self.name">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <containerMappings name="object" labelDirectEdit="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='objectName']" semanticCandidatesExpression="feature:objects" domainClass="partialmodel.PSObject" childrenPresentation="List">
+          <borderedNodeMappings name="partailityForObj" semanticCandidatesExpression="feature:psType" domainClass="partialmodel.PSType">
+            <style xsi:type="style:SquareDescription" labelExpression="aql:self.eGet('Annotation')" labelPosition="node" resizeKind="NSEW" width="8" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>SOUTH</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </borderedNodeMappings>
+          <subNodeMappings name="attribute" labelDirectEdit="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editAttributeType']" semanticCandidatesExpression="feature:attributes" domainClass="partialmodel.PSAttribute">
+            <style xsi:type="style:SquareDescription" labelExpression="aql:'Type: '+self.type" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" roundedCorner="true">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Object" forceRefresh="true" containerMappings="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.PSObject" referenceName="objects">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'object'+container.objects->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="objectName" forceRefresh="true">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Reference" edgeMappings="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='reference']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.PSReference" referenceName="refs">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'ref'+source.refs->size()"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="sourceObject" valueExpression="var:source"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="targetObject" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="UndefinedAttribute" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']/@subNodeMappings[name='attribute']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.Other" referenceName="attributes">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:0"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editAttributeType" forceRefresh="true">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="May" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']/@borderedNodeMappings[name='partailityForObj']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.MayType" referenceName="psType"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Abs" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']/@borderedNodeMappings[name='partailityForObj']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.AbsType" referenceName="psType"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Var" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']/@borderedNodeMappings[name='partailityForObj']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.VarType" referenceName="psType"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="referenceTarget">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="targetObject" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

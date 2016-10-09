@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<partialmodel:PartialModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:partialmodel="http://www.example.org/partialmodel">
+  <objects name="object1">
+    <refs target="//@objects.1" source="//@objects.0"/>
+    <psType xsi:type="partialmodel:MayType"/>
+  </objects>
+  <objects name="object2">
+    <attributes xsi:type="partialmodel:Other" type="fsfs"/>
+    <attributes xsi:type="partialmodel:Other" type="fsfsg"/>
+    <psType xsi:type="partialmodel:AbsType"/>
+  </objects>
+  <objects name="object3">
+    <refs name="cica"/>
+    <refs name="cica" source="//@objects.2"/>
+    <refs name="target" source="//@objects.2"/>
+  </objects>
+</partialmodel:PartialModel>

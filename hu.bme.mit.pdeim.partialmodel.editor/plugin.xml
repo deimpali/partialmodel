@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated partialgenmodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="partialmodel.presentation.PartialmodelModelWizardID"
+            name="%_UI_PartialmodelModelWizard_label"
+            class="partialmodel.presentation.PartialmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PartialmodelModelFile.gif">
+         <description>%_UI_PartialmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated partialgenmodel -->
+      <editor
+            id="partialmodel.presentation.PartialmodelEditorID"
+            name="%_UI_PartialmodelEditor_label"
+            icon="icons/full/obj16/PartialmodelModelFile.gif"
+            extensions="partialmodel"
+            class="partialmodel.presentation.PartialmodelEditor"
+            contributorClass="partialmodel.presentation.PartialmodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
