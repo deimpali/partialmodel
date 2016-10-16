@@ -103,6 +103,7 @@ public class PartialModelItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PartialmodelPackage.Literals.PARTIAL_MODEL__OBJECTS);
+			childrenFeatures.add(PartialmodelPackage.Literals.PARTIAL_MODEL__ALL_ATTRIBUTES);
 		}
 		return childrenFeatures;
 	}
@@ -160,6 +161,7 @@ public class PartialModelItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case PartialmodelPackage.PARTIAL_MODEL__OBJECTS:
+			case PartialmodelPackage.PARTIAL_MODEL__ALL_ATTRIBUTES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -181,6 +183,26 @@ public class PartialModelItemProvider
 			(createChildParameter
 				(PartialmodelPackage.Literals.PARTIAL_MODEL__OBJECTS,
 				 PartialmodelFactory.eINSTANCE.createPSObject()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PartialmodelPackage.Literals.PARTIAL_MODEL__ALL_ATTRIBUTES,
+				 PartialmodelFactory.eINSTANCE.createPSString()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PartialmodelPackage.Literals.PARTIAL_MODEL__ALL_ATTRIBUTES,
+				 PartialmodelFactory.eINSTANCE.createPSInteger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PartialmodelPackage.Literals.PARTIAL_MODEL__ALL_ATTRIBUTES,
+				 PartialmodelFactory.eINSTANCE.createPSBoolean()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PartialmodelPackage.Literals.PARTIAL_MODEL__ALL_ATTRIBUTES,
+				 PartialmodelFactory.eINSTANCE.createPSOtherAttribute()));
 	}
 
 	/**

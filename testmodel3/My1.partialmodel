@@ -4,6 +4,7 @@
     <attributes xsi:type="partialmodel:Other" type="cc">
       <psType xsi:type="partialmodel:MayType"/>
     </attributes>
+    <attributes xsi:type="partialmodel:Other" type="hjh"/>
     <psType xsi:type="partialmodel:AbsType" Annotation="Set"/>
   </objects>
   <objects name="object2">
@@ -15,9 +16,7 @@
     <refs targetObject="//@objects.3" type="inheritance" name="ref2" sourceObject="//@objects.1">
       <psType xsi:type="partialmodel:MayType"/>
     </refs>
-    <attributes xsi:type="partialmodel:Other"/>
-    <attributes xsi:type="partialmodel:Other"/>
-    <attributes xsi:type="partialmodel:Other"/>
+    <refs targetObject="//@objects.2" name="ref3" sourceObject="//@objects.1"/>
   </objects>
   <objects name="object3">
     <attributes xsi:type="partialmodel:Other" type="ss"/>

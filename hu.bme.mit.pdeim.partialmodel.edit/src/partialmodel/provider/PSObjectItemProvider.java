@@ -12,6 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -256,27 +257,12 @@ public class PSObjectItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(PartialmodelPackage.Literals.PS_OBJECT__REFS,
-				 PartialmodelFactory.eINSTANCE.createPSReference()));
+				 PartialmodelFactory.eINSTANCE.createPSReferenceToObject()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(PartialmodelPackage.Literals.PS_OBJECT__ATTRIBUTES,
-				 PartialmodelFactory.eINSTANCE.createPSString()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PartialmodelPackage.Literals.PS_OBJECT__ATTRIBUTES,
-				 PartialmodelFactory.eINSTANCE.createPSInteger()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PartialmodelPackage.Literals.PS_OBJECT__ATTRIBUTES,
-				 PartialmodelFactory.eINSTANCE.createPSBoolean()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PartialmodelPackage.Literals.PS_OBJECT__ATTRIBUTES,
-				 PartialmodelFactory.eINSTANCE.createOther()));
+				 PartialmodelFactory.eINSTANCE.createPSReferenceToAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -58,7 +58,6 @@ public class PartialmodelFactoryImpl extends EFactoryImpl implements Partialmode
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case PartialmodelPackage.PARTIAL_MODEL: return createPartialModel();
-			case PartialmodelPackage.PS_REFERENCE: return createPSReference();
 			case PartialmodelPackage.PS_OBJECT: return createPSObject();
 			case PartialmodelPackage.VAR_TYPE: return createVarType();
 			case PartialmodelPackage.MAY_TYPE: return createMayType();
@@ -66,7 +65,9 @@ public class PartialmodelFactoryImpl extends EFactoryImpl implements Partialmode
 			case PartialmodelPackage.PS_STRING: return createPSString();
 			case PartialmodelPackage.PS_INTEGER: return createPSInteger();
 			case PartialmodelPackage.PS_BOOLEAN: return createPSBoolean();
-			case PartialmodelPackage.OTHER: return createOther();
+			case PartialmodelPackage.PS_OTHER_ATTRIBUTE: return createPSOtherAttribute();
+			case PartialmodelPackage.PS_REFERENCE_TO_OBJECT: return createPSReferenceToObject();
+			case PartialmodelPackage.PS_REFERENCE_TO_ATTRIBUTE: return createPSReferenceToAttribute();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -118,16 +119,6 @@ public class PartialmodelFactoryImpl extends EFactoryImpl implements Partialmode
 	public PartialModel createPartialModel() {
 		PartialModelImpl partialModel = new PartialModelImpl();
 		return partialModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PSReference createPSReference() {
-		PSReferenceImpl psReference = new PSReferenceImpl();
-		return psReference;
 	}
 
 	/**
@@ -205,9 +196,29 @@ public class PartialmodelFactoryImpl extends EFactoryImpl implements Partialmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Other createOther() {
-		OtherImpl other = new OtherImpl();
-		return other;
+	public PSOtherAttribute createPSOtherAttribute() {
+		PSOtherAttributeImpl psOtherAttribute = new PSOtherAttributeImpl();
+		return psOtherAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PSReferenceToObject createPSReferenceToObject() {
+		PSReferenceToObjectImpl psReferenceToObject = new PSReferenceToObjectImpl();
+		return psReferenceToObject;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PSReferenceToAttribute createPSReferenceToAttribute() {
+		PSReferenceToAttributeImpl psReferenceToAttribute = new PSReferenceToAttributeImpl();
+		return psReferenceToAttribute;
 	}
 
 	/**

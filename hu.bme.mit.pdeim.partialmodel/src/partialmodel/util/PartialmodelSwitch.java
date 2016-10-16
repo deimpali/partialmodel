@@ -138,10 +138,24 @@ public class PartialmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PartialmodelPackage.OTHER: {
-				Other other = (Other)theEObject;
-				T result = caseOther(other);
-				if (result == null) result = casePSAttribute(other);
+			case PartialmodelPackage.PS_OTHER_ATTRIBUTE: {
+				PSOtherAttribute psOtherAttribute = (PSOtherAttribute)theEObject;
+				T result = casePSOtherAttribute(psOtherAttribute);
+				if (result == null) result = casePSAttribute(psOtherAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PartialmodelPackage.PS_REFERENCE_TO_OBJECT: {
+				PSReferenceToObject psReferenceToObject = (PSReferenceToObject)theEObject;
+				T result = casePSReferenceToObject(psReferenceToObject);
+				if (result == null) result = casePSReference(psReferenceToObject);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PartialmodelPackage.PS_REFERENCE_TO_ATTRIBUTE: {
+				PSReferenceToAttribute psReferenceToAttribute = (PSReferenceToAttribute)theEObject;
+				T result = casePSReferenceToAttribute(psReferenceToAttribute);
+				if (result == null) result = casePSReference(psReferenceToAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -315,17 +329,47 @@ public class PartialmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Other</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>PS Other Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Other</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>PS Other Attribute</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOther(Other object) {
+	public T casePSOtherAttribute(PSOtherAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>PS Reference To Object</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>PS Reference To Object</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePSReferenceToObject(PSReferenceToObject object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>PS Reference To Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>PS Reference To Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePSReferenceToAttribute(PSReferenceToAttribute object) {
 		return null;
 	}
 

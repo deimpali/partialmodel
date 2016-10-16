@@ -95,29 +95,6 @@ public class PartialmodelItemProviderAdapterFactory extends PartialmodelAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link partialmodel.PSReference} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PSReferenceItemProvider psReferenceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link partialmodel.PSReference}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPSReferenceAdapter() {
-		if (psReferenceItemProvider == null) {
-			psReferenceItemProvider = new PSReferenceItemProvider(this);
-		}
-
-		return psReferenceItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link partialmodel.PSObject} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -279,26 +256,72 @@ public class PartialmodelItemProviderAdapterFactory extends PartialmodelAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link partialmodel.Other} instances.
+	 * This keeps track of the one adapter used for all {@link partialmodel.PSOtherAttribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OtherItemProvider otherItemProvider;
+	protected PSOtherAttributeItemProvider psOtherAttributeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link partialmodel.Other}.
+	 * This creates an adapter for a {@link partialmodel.PSOtherAttribute}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createOtherAdapter() {
-		if (otherItemProvider == null) {
-			otherItemProvider = new OtherItemProvider(this);
+	public Adapter createPSOtherAttributeAdapter() {
+		if (psOtherAttributeItemProvider == null) {
+			psOtherAttributeItemProvider = new PSOtherAttributeItemProvider(this);
 		}
 
-		return otherItemProvider;
+		return psOtherAttributeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link partialmodel.PSReferenceToObject} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PSReferenceToObjectItemProvider psReferenceToObjectItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link partialmodel.PSReferenceToObject}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPSReferenceToObjectAdapter() {
+		if (psReferenceToObjectItemProvider == null) {
+			psReferenceToObjectItemProvider = new PSReferenceToObjectItemProvider(this);
+		}
+
+		return psReferenceToObjectItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link partialmodel.PSReferenceToAttribute} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PSReferenceToAttributeItemProvider psReferenceToAttributeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link partialmodel.PSReferenceToAttribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPSReferenceToAttributeAdapter() {
+		if (psReferenceToAttributeItemProvider == null) {
+			psReferenceToAttributeItemProvider = new PSReferenceToAttributeItemProvider(this);
+		}
+
+		return psReferenceToAttributeItemProvider;
 	}
 
 	/**
@@ -401,7 +424,6 @@ public class PartialmodelItemProviderAdapterFactory extends PartialmodelAdapterF
 	 */
 	public void dispose() {
 		if (partialModelItemProvider != null) partialModelItemProvider.dispose();
-		if (psReferenceItemProvider != null) psReferenceItemProvider.dispose();
 		if (psObjectItemProvider != null) psObjectItemProvider.dispose();
 		if (varTypeItemProvider != null) varTypeItemProvider.dispose();
 		if (mayTypeItemProvider != null) mayTypeItemProvider.dispose();
@@ -409,7 +431,9 @@ public class PartialmodelItemProviderAdapterFactory extends PartialmodelAdapterF
 		if (psStringItemProvider != null) psStringItemProvider.dispose();
 		if (psIntegerItemProvider != null) psIntegerItemProvider.dispose();
 		if (psBooleanItemProvider != null) psBooleanItemProvider.dispose();
-		if (otherItemProvider != null) otherItemProvider.dispose();
+		if (psOtherAttributeItemProvider != null) psOtherAttributeItemProvider.dispose();
+		if (psReferenceToObjectItemProvider != null) psReferenceToObjectItemProvider.dispose();
+		if (psReferenceToAttributeItemProvider != null) psReferenceToAttributeItemProvider.dispose();
 	}
 
 }

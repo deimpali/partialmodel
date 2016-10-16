@@ -86,13 +86,22 @@ public interface PartialmodelPackage extends EPackage {
 	int PARTIAL_MODEL__OPENWORLD = 1;
 
 	/**
+	 * The feature id for the '<em><b>All Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTIAL_MODEL__ALL_ATTRIBUTES = 2;
+
+	/**
 	 * The number of structural features of the '<em>Partial Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARTIAL_MODEL_FEATURE_COUNT = 2;
+	int PARTIAL_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Partial Model</em>' class.
@@ -114,22 +123,13 @@ public interface PartialmodelPackage extends EPackage {
 	int PS_REFERENCE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Target Object</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PS_REFERENCE__TARGET_OBJECT = 0;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PS_REFERENCE__TYPE = 1;
+	int PS_REFERENCE__TYPE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Ps Type</b></em>' containment reference list.
@@ -138,7 +138,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PS_REFERENCE__PS_TYPE = 2;
+	int PS_REFERENCE__PS_TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Referred Class</b></em>' reference.
@@ -147,7 +147,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PS_REFERENCE__REFERRED_CLASS = 3;
+	int PS_REFERENCE__REFERRED_CLASS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -156,7 +156,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PS_REFERENCE__NAME = 4;
+	int PS_REFERENCE__NAME = 3;
 
 	/**
 	 * The feature id for the '<em><b>Source Object</b></em>' reference.
@@ -165,7 +165,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PS_REFERENCE__SOURCE_OBJECT = 5;
+	int PS_REFERENCE__SOURCE_OBJECT = 4;
 
 	/**
 	 * The number of structural features of the '<em>PS Reference</em>' class.
@@ -174,7 +174,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PS_REFERENCE_FEATURE_COUNT = 6;
+	int PS_REFERENCE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>PS Reference</em>' class.
@@ -627,14 +627,14 @@ public interface PartialmodelPackage extends EPackage {
 	int PS_BOOLEAN_OPERATION_COUNT = PS_ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link partialmodel.impl.OtherImpl <em>Other</em>}' class.
+	 * The meta object id for the '{@link partialmodel.impl.PSOtherAttributeImpl <em>PS Other Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see partialmodel.impl.OtherImpl
-	 * @see partialmodel.impl.PartialmodelPackageImpl#getOther()
+	 * @see partialmodel.impl.PSOtherAttributeImpl
+	 * @see partialmodel.impl.PartialmodelPackageImpl#getPSOtherAttribute()
 	 * @generated
 	 */
-	int OTHER = 11;
+	int PS_OTHER_ATTRIBUTE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Ps Type</b></em>' containment reference list.
@@ -643,7 +643,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER__PS_TYPE = PS_ATTRIBUTE__PS_TYPE;
+	int PS_OTHER_ATTRIBUTE__PS_TYPE = PS_ATTRIBUTE__PS_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -652,7 +652,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER__TYPE = PS_ATTRIBUTE__TYPE;
+	int PS_OTHER_ATTRIBUTE__TYPE = PS_ATTRIBUTE__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Reffered Class</b></em>' reference.
@@ -661,25 +661,189 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER__REFFERED_CLASS = PS_ATTRIBUTE_FEATURE_COUNT + 0;
+	int PS_OTHER_ATTRIBUTE__REFFERED_CLASS = PS_ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Other</em>' class.
+	 * The number of structural features of the '<em>PS Other Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER_FEATURE_COUNT = PS_ATTRIBUTE_FEATURE_COUNT + 1;
+	int PS_OTHER_ATTRIBUTE_FEATURE_COUNT = PS_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Other</em>' class.
+	 * The number of operations of the '<em>PS Other Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER_OPERATION_COUNT = PS_ATTRIBUTE_OPERATION_COUNT + 0;
+	int PS_OTHER_ATTRIBUTE_OPERATION_COUNT = PS_ATTRIBUTE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link partialmodel.impl.PSReferenceToObjectImpl <em>PS Reference To Object</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see partialmodel.impl.PSReferenceToObjectImpl
+	 * @see partialmodel.impl.PartialmodelPackageImpl#getPSReferenceToObject()
+	 * @generated
+	 */
+	int PS_REFERENCE_TO_OBJECT = 12;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_OBJECT__TYPE = PS_REFERENCE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Ps Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_OBJECT__PS_TYPE = PS_REFERENCE__PS_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Referred Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_OBJECT__REFERRED_CLASS = PS_REFERENCE__REFERRED_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_OBJECT__NAME = PS_REFERENCE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Source Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_OBJECT__SOURCE_OBJECT = PS_REFERENCE__SOURCE_OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Target Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_OBJECT__TARGET_OBJECT = PS_REFERENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>PS Reference To Object</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_OBJECT_FEATURE_COUNT = PS_REFERENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>PS Reference To Object</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_OBJECT_OPERATION_COUNT = PS_REFERENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link partialmodel.impl.PSReferenceToAttributeImpl <em>PS Reference To Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see partialmodel.impl.PSReferenceToAttributeImpl
+	 * @see partialmodel.impl.PartialmodelPackageImpl#getPSReferenceToAttribute()
+	 * @generated
+	 */
+	int PS_REFERENCE_TO_ATTRIBUTE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_ATTRIBUTE__TYPE = PS_REFERENCE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Ps Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_ATTRIBUTE__PS_TYPE = PS_REFERENCE__PS_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Referred Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_ATTRIBUTE__REFERRED_CLASS = PS_REFERENCE__REFERRED_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_ATTRIBUTE__NAME = PS_REFERENCE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Source Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_ATTRIBUTE__SOURCE_OBJECT = PS_REFERENCE__SOURCE_OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Target Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_ATTRIBUTE__TARGET_ATTRIBUTE = PS_REFERENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>PS Reference To Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_ATTRIBUTE_FEATURE_COUNT = PS_REFERENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>PS Reference To Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_REFERENCE_TO_ATTRIBUTE_OPERATION_COUNT = PS_REFERENCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link partialmodel.May <em>May</em>}' enum.
@@ -689,7 +853,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @see partialmodel.impl.PartialmodelPackageImpl#getMay()
 	 * @generated
 	 */
-	int MAY = 12;
+	int MAY = 14;
 
 	/**
 	 * The meta object id for the '{@link partialmodel.Abs <em>Abs</em>}' enum.
@@ -699,7 +863,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @see partialmodel.impl.PartialmodelPackageImpl#getAbs()
 	 * @generated
 	 */
-	int ABS = 13;
+	int ABS = 15;
 
 	/**
 	 * The meta object id for the '{@link partialmodel.Var <em>Var</em>}' enum.
@@ -709,7 +873,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @see partialmodel.impl.PartialmodelPackageImpl#getVar()
 	 * @generated
 	 */
-	int VAR = 14;
+	int VAR = 16;
 
 
 	/**
@@ -745,6 +909,17 @@ public interface PartialmodelPackage extends EPackage {
 	EAttribute getPartialModel_Openworld();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link partialmodel.PartialModel#getAllAttributes <em>All Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>All Attributes</em>'.
+	 * @see partialmodel.PartialModel#getAllAttributes()
+	 * @see #getPartialModel()
+	 * @generated
+	 */
+	EReference getPartialModel_AllAttributes();
+
+	/**
 	 * Returns the meta object for class '{@link partialmodel.PSReference <em>PS Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -753,17 +928,6 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPSReference();
-
-	/**
-	 * Returns the meta object for the reference '{@link partialmodel.PSReference#getTargetObject <em>Target Object</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target Object</em>'.
-	 * @see partialmodel.PSReference#getTargetObject()
-	 * @see #getPSReference()
-	 * @generated
-	 */
-	EReference getPSReference_TargetObject();
 
 	/**
 	 * Returns the meta object for the attribute '{@link partialmodel.PSReference#getType <em>Type</em>}'.
@@ -1076,25 +1240,67 @@ public interface PartialmodelPackage extends EPackage {
 	EAttribute getPSBoolean_Value();
 
 	/**
-	 * Returns the meta object for class '{@link partialmodel.Other <em>Other</em>}'.
+	 * Returns the meta object for class '{@link partialmodel.PSOtherAttribute <em>PS Other Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Other</em>'.
-	 * @see partialmodel.Other
+	 * @return the meta object for class '<em>PS Other Attribute</em>'.
+	 * @see partialmodel.PSOtherAttribute
 	 * @generated
 	 */
-	EClass getOther();
+	EClass getPSOtherAttribute();
 
 	/**
-	 * Returns the meta object for the reference '{@link partialmodel.Other#getRefferedClass <em>Reffered Class</em>}'.
+	 * Returns the meta object for the reference '{@link partialmodel.PSOtherAttribute#getRefferedClass <em>Reffered Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Reffered Class</em>'.
-	 * @see partialmodel.Other#getRefferedClass()
-	 * @see #getOther()
+	 * @see partialmodel.PSOtherAttribute#getRefferedClass()
+	 * @see #getPSOtherAttribute()
 	 * @generated
 	 */
-	EReference getOther_RefferedClass();
+	EReference getPSOtherAttribute_RefferedClass();
+
+	/**
+	 * Returns the meta object for class '{@link partialmodel.PSReferenceToObject <em>PS Reference To Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>PS Reference To Object</em>'.
+	 * @see partialmodel.PSReferenceToObject
+	 * @generated
+	 */
+	EClass getPSReferenceToObject();
+
+	/**
+	 * Returns the meta object for the reference '{@link partialmodel.PSReferenceToObject#getTargetObject <em>Target Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target Object</em>'.
+	 * @see partialmodel.PSReferenceToObject#getTargetObject()
+	 * @see #getPSReferenceToObject()
+	 * @generated
+	 */
+	EReference getPSReferenceToObject_TargetObject();
+
+	/**
+	 * Returns the meta object for class '{@link partialmodel.PSReferenceToAttribute <em>PS Reference To Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>PS Reference To Attribute</em>'.
+	 * @see partialmodel.PSReferenceToAttribute
+	 * @generated
+	 */
+	EClass getPSReferenceToAttribute();
+
+	/**
+	 * Returns the meta object for the reference '{@link partialmodel.PSReferenceToAttribute#getTargetAttribute <em>Target Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target Attribute</em>'.
+	 * @see partialmodel.PSReferenceToAttribute#getTargetAttribute()
+	 * @see #getPSReferenceToAttribute()
+	 * @generated
+	 */
+	EReference getPSReferenceToAttribute_TargetAttribute();
 
 	/**
 	 * Returns the meta object for enum '{@link partialmodel.May <em>May</em>}'.
@@ -1176,6 +1382,14 @@ public interface PartialmodelPackage extends EPackage {
 		EAttribute PARTIAL_MODEL__OPENWORLD = eINSTANCE.getPartialModel_Openworld();
 
 		/**
+		 * The meta object literal for the '<em><b>All Attributes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARTIAL_MODEL__ALL_ATTRIBUTES = eINSTANCE.getPartialModel_AllAttributes();
+
+		/**
 		 * The meta object literal for the '{@link partialmodel.impl.PSReferenceImpl <em>PS Reference</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1184,14 +1398,6 @@ public interface PartialmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PS_REFERENCE = eINSTANCE.getPSReference();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Object</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PS_REFERENCE__TARGET_OBJECT = eINSTANCE.getPSReference_TargetObject();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -1444,14 +1650,14 @@ public interface PartialmodelPackage extends EPackage {
 		EAttribute PS_BOOLEAN__VALUE = eINSTANCE.getPSBoolean_Value();
 
 		/**
-		 * The meta object literal for the '{@link partialmodel.impl.OtherImpl <em>Other</em>}' class.
+		 * The meta object literal for the '{@link partialmodel.impl.PSOtherAttributeImpl <em>PS Other Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see partialmodel.impl.OtherImpl
-		 * @see partialmodel.impl.PartialmodelPackageImpl#getOther()
+		 * @see partialmodel.impl.PSOtherAttributeImpl
+		 * @see partialmodel.impl.PartialmodelPackageImpl#getPSOtherAttribute()
 		 * @generated
 		 */
-		EClass OTHER = eINSTANCE.getOther();
+		EClass PS_OTHER_ATTRIBUTE = eINSTANCE.getPSOtherAttribute();
 
 		/**
 		 * The meta object literal for the '<em><b>Reffered Class</b></em>' reference feature.
@@ -1459,7 +1665,43 @@ public interface PartialmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OTHER__REFFERED_CLASS = eINSTANCE.getOther_RefferedClass();
+		EReference PS_OTHER_ATTRIBUTE__REFFERED_CLASS = eINSTANCE.getPSOtherAttribute_RefferedClass();
+
+		/**
+		 * The meta object literal for the '{@link partialmodel.impl.PSReferenceToObjectImpl <em>PS Reference To Object</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see partialmodel.impl.PSReferenceToObjectImpl
+		 * @see partialmodel.impl.PartialmodelPackageImpl#getPSReferenceToObject()
+		 * @generated
+		 */
+		EClass PS_REFERENCE_TO_OBJECT = eINSTANCE.getPSReferenceToObject();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PS_REFERENCE_TO_OBJECT__TARGET_OBJECT = eINSTANCE.getPSReferenceToObject_TargetObject();
+
+		/**
+		 * The meta object literal for the '{@link partialmodel.impl.PSReferenceToAttributeImpl <em>PS Reference To Attribute</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see partialmodel.impl.PSReferenceToAttributeImpl
+		 * @see partialmodel.impl.PartialmodelPackageImpl#getPSReferenceToAttribute()
+		 * @generated
+		 */
+		EClass PS_REFERENCE_TO_ATTRIBUTE = eINSTANCE.getPSReferenceToAttribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Attribute</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PS_REFERENCE_TO_ATTRIBUTE__TARGET_ATTRIBUTE = eINSTANCE.getPSReferenceToAttribute_TargetAttribute();
 
 		/**
 		 * The meta object literal for the '{@link partialmodel.May <em>May</em>}' enum.

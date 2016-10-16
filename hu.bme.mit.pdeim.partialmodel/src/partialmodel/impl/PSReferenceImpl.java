@@ -28,7 +28,6 @@ import partialmodel.PartialmodelPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link partialmodel.impl.PSReferenceImpl#getTargetObject <em>Target Object</em>}</li>
  *   <li>{@link partialmodel.impl.PSReferenceImpl#getType <em>Type</em>}</li>
  *   <li>{@link partialmodel.impl.PSReferenceImpl#getPsType <em>Ps Type</em>}</li>
  *   <li>{@link partialmodel.impl.PSReferenceImpl#getReferredClass <em>Referred Class</em>}</li>
@@ -38,17 +37,7 @@ import partialmodel.PartialmodelPackage;
  *
  * @generated
  */
-public class PSReferenceImpl extends MinimalEObjectImpl.Container implements PSReference {
-	/**
-	 * The cached value of the '{@link #getTargetObject() <em>Target Object</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetObject()
-	 * @generated
-	 * @ordered
-	 */
-	protected PSObject targetObject;
-
+public abstract class PSReferenceImpl extends MinimalEObjectImpl.Container implements PSReference {
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -136,44 +125,6 @@ public class PSReferenceImpl extends MinimalEObjectImpl.Container implements PSR
 	@Override
 	protected EClass eStaticClass() {
 		return PartialmodelPackage.Literals.PS_REFERENCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PSObject getTargetObject() {
-		if (targetObject != null && targetObject.eIsProxy()) {
-			InternalEObject oldTargetObject = (InternalEObject)targetObject;
-			targetObject = (PSObject)eResolveProxy(oldTargetObject);
-			if (targetObject != oldTargetObject) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PartialmodelPackage.PS_REFERENCE__TARGET_OBJECT, oldTargetObject, targetObject));
-			}
-		}
-		return targetObject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PSObject basicGetTargetObject() {
-		return targetObject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTargetObject(PSObject newTargetObject) {
-		PSObject oldTargetObject = targetObject;
-		targetObject = newTargetObject;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PartialmodelPackage.PS_REFERENCE__TARGET_OBJECT, oldTargetObject, targetObject));
 	}
 
 	/**
@@ -328,9 +279,6 @@ public class PSReferenceImpl extends MinimalEObjectImpl.Container implements PSR
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PartialmodelPackage.PS_REFERENCE__TARGET_OBJECT:
-				if (resolve) return getTargetObject();
-				return basicGetTargetObject();
 			case PartialmodelPackage.PS_REFERENCE__TYPE:
 				return getType();
 			case PartialmodelPackage.PS_REFERENCE__PS_TYPE:
@@ -356,9 +304,6 @@ public class PSReferenceImpl extends MinimalEObjectImpl.Container implements PSR
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PartialmodelPackage.PS_REFERENCE__TARGET_OBJECT:
-				setTargetObject((PSObject)newValue);
-				return;
 			case PartialmodelPackage.PS_REFERENCE__TYPE:
 				setType((String)newValue);
 				return;
@@ -387,9 +332,6 @@ public class PSReferenceImpl extends MinimalEObjectImpl.Container implements PSR
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PartialmodelPackage.PS_REFERENCE__TARGET_OBJECT:
-				setTargetObject((PSObject)null);
-				return;
 			case PartialmodelPackage.PS_REFERENCE__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
@@ -417,8 +359,6 @@ public class PSReferenceImpl extends MinimalEObjectImpl.Container implements PSR
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PartialmodelPackage.PS_REFERENCE__TARGET_OBJECT:
-				return targetObject != null;
 			case PartialmodelPackage.PS_REFERENCE__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case PartialmodelPackage.PS_REFERENCE__PS_TYPE:

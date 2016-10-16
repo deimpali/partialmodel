@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link partialmodel.PSReference#getTargetObject <em>Target Object</em>}</li>
  *   <li>{@link partialmodel.PSReference#getType <em>Type</em>}</li>
  *   <li>{@link partialmodel.PSReference#getPsType <em>Ps Type</em>}</li>
  *   <li>{@link partialmodel.PSReference#getReferredClass <em>Referred Class</em>}</li>
@@ -24,36 +23,10 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see partialmodel.PartialmodelPackage#getPSReference()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface PSReference extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Target Object</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Object</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Object</em>' reference.
-	 * @see #setTargetObject(PSObject)
-	 * @see partialmodel.PartialmodelPackage#getPSReference_TargetObject()
-	 * @model
-	 * @generated
-	 */
-	PSObject getTargetObject();
-
-	/**
-	 * Sets the value of the '{@link partialmodel.PSReference#getTargetObject <em>Target Object</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Object</em>' reference.
-	 * @see #getTargetObject()
-	 * @generated
-	 */
-	void setTargetObject(PSObject value);
-
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->

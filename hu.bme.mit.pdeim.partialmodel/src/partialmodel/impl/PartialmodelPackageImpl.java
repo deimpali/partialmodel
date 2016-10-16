@@ -15,12 +15,14 @@ import partialmodel.Abs;
 import partialmodel.AbsType;
 import partialmodel.May;
 import partialmodel.MayType;
-import partialmodel.Other;
 import partialmodel.PSAttribute;
 import partialmodel.PSBoolean;
 import partialmodel.PSInteger;
 import partialmodel.PSObject;
+import partialmodel.PSOtherAttribute;
 import partialmodel.PSReference;
+import partialmodel.PSReferenceToAttribute;
+import partialmodel.PSReferenceToObject;
 import partialmodel.PSString;
 import partialmodel.PSType;
 import partialmodel.PartialModel;
@@ -118,7 +120,21 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass otherEClass = null;
+	private EClass psOtherAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass psReferenceToObjectEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass psReferenceToAttributeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -237,6 +253,15 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPartialModel_AllAttributes() {
+		return (EReference)partialModelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPSReference() {
 		return psReferenceEClass;
 	}
@@ -246,17 +271,8 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPSReference_TargetObject() {
-		return (EReference)psReferenceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getPSReference_Type() {
-		return (EAttribute)psReferenceEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)psReferenceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -265,7 +281,7 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * @generated
 	 */
 	public EReference getPSReference_PsType() {
-		return (EReference)psReferenceEClass.getEStructuralFeatures().get(2);
+		return (EReference)psReferenceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -274,7 +290,7 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * @generated
 	 */
 	public EReference getPSReference_ReferredClass() {
-		return (EReference)psReferenceEClass.getEStructuralFeatures().get(3);
+		return (EReference)psReferenceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -283,7 +299,7 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * @generated
 	 */
 	public EAttribute getPSReference_Name() {
-		return (EAttribute)psReferenceEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)psReferenceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -292,7 +308,7 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * @generated
 	 */
 	public EReference getPSReference_SourceObject() {
-		return (EReference)psReferenceEClass.getEStructuralFeatures().get(5);
+		return (EReference)psReferenceEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -516,8 +532,8 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOther() {
-		return otherEClass;
+	public EClass getPSOtherAttribute() {
+		return psOtherAttributeEClass;
 	}
 
 	/**
@@ -525,8 +541,44 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOther_RefferedClass() {
-		return (EReference)otherEClass.getEStructuralFeatures().get(0);
+	public EReference getPSOtherAttribute_RefferedClass() {
+		return (EReference)psOtherAttributeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPSReferenceToObject() {
+		return psReferenceToObjectEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPSReferenceToObject_TargetObject() {
+		return (EReference)psReferenceToObjectEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPSReferenceToAttribute() {
+		return psReferenceToAttributeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPSReferenceToAttribute_TargetAttribute() {
+		return (EReference)psReferenceToAttributeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -587,9 +639,9 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 		partialModelEClass = createEClass(PARTIAL_MODEL);
 		createEReference(partialModelEClass, PARTIAL_MODEL__OBJECTS);
 		createEAttribute(partialModelEClass, PARTIAL_MODEL__OPENWORLD);
+		createEReference(partialModelEClass, PARTIAL_MODEL__ALL_ATTRIBUTES);
 
 		psReferenceEClass = createEClass(PS_REFERENCE);
-		createEReference(psReferenceEClass, PS_REFERENCE__TARGET_OBJECT);
 		createEAttribute(psReferenceEClass, PS_REFERENCE__TYPE);
 		createEReference(psReferenceEClass, PS_REFERENCE__PS_TYPE);
 		createEReference(psReferenceEClass, PS_REFERENCE__REFERRED_CLASS);
@@ -629,8 +681,14 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 		psBooleanEClass = createEClass(PS_BOOLEAN);
 		createEAttribute(psBooleanEClass, PS_BOOLEAN__VALUE);
 
-		otherEClass = createEClass(OTHER);
-		createEReference(otherEClass, OTHER__REFFERED_CLASS);
+		psOtherAttributeEClass = createEClass(PS_OTHER_ATTRIBUTE);
+		createEReference(psOtherAttributeEClass, PS_OTHER_ATTRIBUTE__REFFERED_CLASS);
+
+		psReferenceToObjectEClass = createEClass(PS_REFERENCE_TO_OBJECT);
+		createEReference(psReferenceToObjectEClass, PS_REFERENCE_TO_OBJECT__TARGET_OBJECT);
+
+		psReferenceToAttributeEClass = createEClass(PS_REFERENCE_TO_ATTRIBUTE);
+		createEReference(psReferenceToAttributeEClass, PS_REFERENCE_TO_ATTRIBUTE__TARGET_ATTRIBUTE);
 
 		// Create enums
 		mayEEnum = createEEnum(MAY);
@@ -675,15 +733,17 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 		psStringEClass.getESuperTypes().add(this.getPSAttribute());
 		psIntegerEClass.getESuperTypes().add(this.getPSAttribute());
 		psBooleanEClass.getESuperTypes().add(this.getPSAttribute());
-		otherEClass.getESuperTypes().add(this.getPSAttribute());
+		psOtherAttributeEClass.getESuperTypes().add(this.getPSAttribute());
+		psReferenceToObjectEClass.getESuperTypes().add(this.getPSReference());
+		psReferenceToAttributeEClass.getESuperTypes().add(this.getPSReference());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(partialModelEClass, PartialModel.class, "PartialModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPartialModel_Objects(), this.getPSObject(), null, "objects", null, 0, -1, PartialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPartialModel_Openworld(), theEcorePackage.getEBoolean(), "openworld", null, 0, 1, PartialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPartialModel_AllAttributes(), this.getPSAttribute(), null, "AllAttributes", null, 0, -1, PartialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(psReferenceEClass, PSReference.class, "PSReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPSReference_TargetObject(), this.getPSObject(), null, "targetObject", null, 0, 1, PSReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(psReferenceEClass, PSReference.class, "PSReference", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPSReference_Type(), ecorePackage.getEString(), "type", null, 0, 1, PSReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPSReference_PsType(), this.getPSType(), null, "psType", null, 0, 3, PSReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPSReference_ReferredClass(), theEcorePackage.getEClass(), null, "referredClass", null, 0, 1, PSReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -691,8 +751,8 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 		initEReference(getPSReference_SourceObject(), this.getPSObject(), null, "sourceObject", null, 0, 1, PSReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(psObjectEClass, PSObject.class, "PSObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPSObject_Refs(), this.getPSReference(), null, "refs", null, 0, -1, PSObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPSObject_Attributes(), this.getPSAttribute(), null, "attributes", null, 0, -1, PSObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPSObject_Refs(), this.getPSReferenceToObject(), null, "refs", null, 0, -1, PSObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPSObject_Attributes(), this.getPSReferenceToAttribute(), null, "attributes", null, 0, -1, PSObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPSObject_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, PSObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPSObject_PsType(), this.getPSType(), null, "psType", null, 0, 3, PSObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPSObject_PackageNsUri(), ecorePackage.getEString(), "packageNsUri", null, 0, 1, PSObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -723,8 +783,14 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 		initEClass(psBooleanEClass, PSBoolean.class, "PSBoolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPSBoolean_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, PSBoolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(otherEClass, Other.class, "Other", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOther_RefferedClass(), theEcorePackage.getEClass(), null, "refferedClass", null, 0, 1, Other.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(psOtherAttributeEClass, PSOtherAttribute.class, "PSOtherAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPSOtherAttribute_RefferedClass(), theEcorePackage.getEClass(), null, "refferedClass", null, 0, 1, PSOtherAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(psReferenceToObjectEClass, PSReferenceToObject.class, "PSReferenceToObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPSReferenceToObject_TargetObject(), this.getPSObject(), null, "targetObject", null, 0, 1, PSReferenceToObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(psReferenceToAttributeEClass, PSReferenceToAttribute.class, "PSReferenceToAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPSReferenceToAttribute_TargetAttribute(), this.getPSAttribute(), null, "targetAttribute", null, 0, 1, PSReferenceToAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(mayEEnum, May.class, "May");

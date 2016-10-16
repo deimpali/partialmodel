@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface PSObject extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Refs</b></em>' containment reference list.
-	 * The list contents are of type {@link partialmodel.PSReference}.
+	 * The list contents are of type {@link partialmodel.PSReferenceToObject}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Refs</em>' reference list isn't clear,
@@ -44,11 +44,11 @@ public interface PSObject extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<PSReference> getRefs();
+	EList<PSReferenceToObject> getRefs();
 
 	/**
 	 * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
-	 * The list contents are of type {@link partialmodel.PSAttribute}.
+	 * The list contents are of type {@link partialmodel.PSReferenceToAttribute}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Attributes</em>' reference list isn't clear,
@@ -60,7 +60,7 @@ public interface PSObject extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<PSAttribute> getAttributes();
+	EList<PSReferenceToAttribute> getAttributes();
 
 	/**
 	 * Returns the value of the '<em><b>Type Name</b></em>' attribute.

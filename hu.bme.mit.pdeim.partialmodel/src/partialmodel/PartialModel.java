@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link partialmodel.PartialModel#getObjects <em>Objects</em>}</li>
  *   <li>{@link partialmodel.PartialModel#isOpenworld <em>Openworld</em>}</li>
+ *   <li>{@link partialmodel.PartialModel#getAllAttributes <em>All Attributes</em>}</li>
  * </ul>
  *
  * @see partialmodel.PartialmodelPackage#getPartialModel()
@@ -65,5 +66,21 @@ public interface PartialModel extends EObject {
 	 * @generated
 	 */
 	void setOpenworld(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>All Attributes</b></em>' containment reference list.
+	 * The list contents are of type {@link partialmodel.PSAttribute}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>All Attributes</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>All Attributes</em>' containment reference list.
+	 * @see partialmodel.PartialmodelPackage#getPartialModel_AllAttributes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<PSAttribute> getAllAttributes();
 
 } // PartialModel

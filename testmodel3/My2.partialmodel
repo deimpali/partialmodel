@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<partialmodel:PartialModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:partialmodel="http://www.example.org/partialmodel">
+  <objects name="object2">
+    <refs name="ref1" sourceObject="//@objects.0" targetObject="//@objects.1"/>
+    <attributes name="attr1" sourceObject="//@objects.0" targetAttribute="//@AllAttributes.1"/>
+    <attributes name="attr2" sourceObject="//@objects.0" targetAttribute="//@AllAttributes.2"/>
+    <psType xsi:type="partialmodel:MayType"/>
+  </objects>
+  <objects name="object1">
+    <attributes name="attr1" sourceObject="//@objects.1" targetAttribute="//@AllAttributes.0"/>
+  </objects>
+  <objects name="object3">
+    <attributes name="attr1" sourceObject="//@objects.2" targetAttribute="//@AllAttributes.0"/>
+  </objects>
+  <AllAttributes xsi:type="partialmodel:PSOtherAttribute" type="vv">
+    <psType xsi:type="partialmodel:MayType"/>
+  </AllAttributes>
+  <AllAttributes xsi:type="partialmodel:PSOtherAttribute"/>
+  <AllAttributes xsi:type="partialmodel:PSOtherAttribute"/>
+</partialmodel:PartialModel>

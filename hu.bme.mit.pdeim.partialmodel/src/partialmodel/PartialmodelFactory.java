@@ -31,15 +31,6 @@ public interface PartialmodelFactory extends EFactory {
 	PartialModel createPartialModel();
 
 	/**
-	 * Returns a new object of class '<em>PS Reference</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>PS Reference</em>'.
-	 * @generated
-	 */
-	PSReference createPSReference();
-
-	/**
 	 * Returns a new object of class '<em>PS Object</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,13 +94,31 @@ public interface PartialmodelFactory extends EFactory {
 	PSBoolean createPSBoolean();
 
 	/**
-	 * Returns a new object of class '<em>Other</em>'.
+	 * Returns a new object of class '<em>PS Other Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Other</em>'.
+	 * @return a new object of class '<em>PS Other Attribute</em>'.
 	 * @generated
 	 */
-	Other createOther();
+	PSOtherAttribute createPSOtherAttribute();
+
+	/**
+	 * Returns a new object of class '<em>PS Reference To Object</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>PS Reference To Object</em>'.
+	 * @generated
+	 */
+	PSReferenceToObject createPSReferenceToObject();
+
+	/**
+	 * Returns a new object of class '<em>PS Reference To Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>PS Reference To Attribute</em>'.
+	 * @generated
+	 */
+	PSReferenceToAttribute createPSReferenceToAttribute();
 
 	/**
 	 * Returns the package supported by this factory.

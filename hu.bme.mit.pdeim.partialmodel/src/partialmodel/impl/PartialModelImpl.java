@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import partialmodel.PSAttribute;
 import partialmodel.PSObject;
 import partialmodel.PartialModel;
 import partialmodel.PartialmodelPackage;
@@ -31,6 +32,7 @@ import partialmodel.PartialmodelPackage;
  * <ul>
  *   <li>{@link partialmodel.impl.PartialModelImpl#getObjects <em>Objects</em>}</li>
  *   <li>{@link partialmodel.impl.PartialModelImpl#isOpenworld <em>Openworld</em>}</li>
+ *   <li>{@link partialmodel.impl.PartialModelImpl#getAllAttributes <em>All Attributes</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,6 +67,16 @@ public class PartialModelImpl extends MinimalEObjectImpl.Container implements Pa
 	 * @ordered
 	 */
 	protected boolean openworld = OPENWORLD_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAllAttributes() <em>All Attributes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAllAttributes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PSAttribute> allAttributes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,11 +135,25 @@ public class PartialModelImpl extends MinimalEObjectImpl.Container implements Pa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<PSAttribute> getAllAttributes() {
+		if (allAttributes == null) {
+			allAttributes = new EObjectContainmentEList<PSAttribute>(PSAttribute.class, this, PartialmodelPackage.PARTIAL_MODEL__ALL_ATTRIBUTES);
+		}
+		return allAttributes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PartialmodelPackage.PARTIAL_MODEL__OBJECTS:
 				return ((InternalEList<?>)getObjects()).basicRemove(otherEnd, msgs);
+			case PartialmodelPackage.PARTIAL_MODEL__ALL_ATTRIBUTES:
+				return ((InternalEList<?>)getAllAttributes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -144,6 +170,8 @@ public class PartialModelImpl extends MinimalEObjectImpl.Container implements Pa
 				return getObjects();
 			case PartialmodelPackage.PARTIAL_MODEL__OPENWORLD:
 				return isOpenworld();
+			case PartialmodelPackage.PARTIAL_MODEL__ALL_ATTRIBUTES:
+				return getAllAttributes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -164,6 +192,10 @@ public class PartialModelImpl extends MinimalEObjectImpl.Container implements Pa
 			case PartialmodelPackage.PARTIAL_MODEL__OPENWORLD:
 				setOpenworld((Boolean)newValue);
 				return;
+			case PartialmodelPackage.PARTIAL_MODEL__ALL_ATTRIBUTES:
+				getAllAttributes().clear();
+				getAllAttributes().addAll((Collection<? extends PSAttribute>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -182,6 +214,9 @@ public class PartialModelImpl extends MinimalEObjectImpl.Container implements Pa
 			case PartialmodelPackage.PARTIAL_MODEL__OPENWORLD:
 				setOpenworld(OPENWORLD_EDEFAULT);
 				return;
+			case PartialmodelPackage.PARTIAL_MODEL__ALL_ATTRIBUTES:
+				getAllAttributes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -198,6 +233,8 @@ public class PartialModelImpl extends MinimalEObjectImpl.Container implements Pa
 				return objects != null && !objects.isEmpty();
 			case PartialmodelPackage.PARTIAL_MODEL__OPENWORLD:
 				return openworld != OPENWORLD_EDEFAULT;
+			case PartialmodelPackage.PARTIAL_MODEL__ALL_ATTRIBUTES:
+				return allAttributes != null && !allAttributes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

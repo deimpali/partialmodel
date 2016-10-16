@@ -5,9 +5,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
         eType="#//PSObject" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="openworld" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AllAttributes" upperBound="-1"
+        eType="#//PSAttribute" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PSReference">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="targetObject" eType="#//PSObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PSReference" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="psType" upperBound="3"
         eType="#//PSType" containment="true"/>
@@ -16,10 +17,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceObject" eType="#//PSObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PSObject">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" upperBound="-1" eType="#//PSReference"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" upperBound="-1" eType="#//PSReferenceToObject"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//PSAttribute" containment="true"/>
+        eType="#//PSReferenceToAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="psType" upperBound="3"
         eType="#//PSType" containment="true"/>
@@ -63,7 +64,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="PSBoolean" eSuperTypes="#//PSAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Other" eSuperTypes="#//PSAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="PSOtherAttribute" eSuperTypes="#//PSAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="refferedClass" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PSReferenceToObject" eSuperTypes="#//PSReference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetObject" eType="#//PSObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PSReferenceToAttribute" eSuperTypes="#//PSReference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetAttribute" eType="#//PSAttribute"/>
   </eClassifiers>
 </ecore:EPackage>

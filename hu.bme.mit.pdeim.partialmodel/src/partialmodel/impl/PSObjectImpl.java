@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import partialmodel.PSAttribute;
 import partialmodel.PSObject;
-import partialmodel.PSReference;
+import partialmodel.PSReferenceToAttribute;
+import partialmodel.PSReferenceToObject;
 import partialmodel.PSType;
 import partialmodel.PartialmodelPackage;
 
@@ -51,7 +51,7 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PSReference> refs;
+	protected EList<PSReferenceToObject> refs;
 
 	/**
 	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
@@ -61,7 +61,7 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PSAttribute> attributes;
+	protected EList<PSReferenceToAttribute> attributes;
 
 	/**
 	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -167,9 +167,9 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PSReference> getRefs() {
+	public EList<PSReferenceToObject> getRefs() {
 		if (refs == null) {
-			refs = new EObjectContainmentEList<PSReference>(PSReference.class, this, PartialmodelPackage.PS_OBJECT__REFS);
+			refs = new EObjectContainmentEList<PSReferenceToObject>(PSReferenceToObject.class, this, PartialmodelPackage.PS_OBJECT__REFS);
 		}
 		return refs;
 	}
@@ -179,9 +179,9 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PSAttribute> getAttributes() {
+	public EList<PSReferenceToAttribute> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectContainmentEList<PSAttribute>(PSAttribute.class, this, PartialmodelPackage.PS_OBJECT__ATTRIBUTES);
+			attributes = new EObjectContainmentEList<PSReferenceToAttribute>(PSReferenceToAttribute.class, this, PartialmodelPackage.PS_OBJECT__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -355,11 +355,11 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 		switch (featureID) {
 			case PartialmodelPackage.PS_OBJECT__REFS:
 				getRefs().clear();
-				getRefs().addAll((Collection<? extends PSReference>)newValue);
+				getRefs().addAll((Collection<? extends PSReferenceToObject>)newValue);
 				return;
 			case PartialmodelPackage.PS_OBJECT__ATTRIBUTES:
 				getAttributes().clear();
-				getAttributes().addAll((Collection<? extends PSAttribute>)newValue);
+				getAttributes().addAll((Collection<? extends PSReferenceToAttribute>)newValue);
 				return;
 			case PartialmodelPackage.PS_OBJECT__TYPE_NAME:
 				setTypeName((String)newValue);

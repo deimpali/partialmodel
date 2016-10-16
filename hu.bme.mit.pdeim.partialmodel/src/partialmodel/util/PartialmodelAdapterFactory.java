@@ -112,8 +112,16 @@ public class PartialmodelAdapterFactory extends AdapterFactoryImpl {
 				return createPSBooleanAdapter();
 			}
 			@Override
-			public Adapter caseOther(Other object) {
-				return createOtherAdapter();
+			public Adapter casePSOtherAttribute(PSOtherAttribute object) {
+				return createPSOtherAttributeAdapter();
+			}
+			@Override
+			public Adapter casePSReferenceToObject(PSReferenceToObject object) {
+				return createPSReferenceToObjectAdapter();
+			}
+			@Override
+			public Adapter casePSReferenceToAttribute(PSReferenceToAttribute object) {
+				return createPSReferenceToAttributeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -290,16 +298,44 @@ public class PartialmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link partialmodel.Other <em>Other</em>}'.
+	 * Creates a new adapter for an object of class '{@link partialmodel.PSOtherAttribute <em>PS Other Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see partialmodel.Other
+	 * @see partialmodel.PSOtherAttribute
 	 * @generated
 	 */
-	public Adapter createOtherAdapter() {
+	public Adapter createPSOtherAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link partialmodel.PSReferenceToObject <em>PS Reference To Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see partialmodel.PSReferenceToObject
+	 * @generated
+	 */
+	public Adapter createPSReferenceToObjectAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link partialmodel.PSReferenceToAttribute <em>PS Reference To Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see partialmodel.PSReferenceToAttribute
+	 * @generated
+	 */
+	public Adapter createPSReferenceToAttributeAdapter() {
 		return null;
 	}
 

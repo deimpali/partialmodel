@@ -7,7 +7,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated partialgenmodel -->
+      <!-- @generated partialmodel -->
       <factory
             uri="http://www.example.org/partialmodel"
             class="partialmodel.provider.PartialmodelItemProviderAdapterFactory"

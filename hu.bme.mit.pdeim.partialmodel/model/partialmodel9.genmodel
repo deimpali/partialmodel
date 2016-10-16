@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/hu.bme.mit.pdeim.partialmodel/src" modelPluginID="hu.bme.mit.pdeim.partialmodel"
+    modelName="Partialmodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>partialmodel.ecore</foreignModel>
+  <genPackages prefix="Partialmodel" disposableProviderFactory="true" ecorePackage="partialmodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="partialmodel.ecore#//May">
+      <genEnumLiterals ecoreEnumLiteral="partialmodel.ecore#//May/MayExist"/>
+      <genEnumLiterals ecoreEnumLiteral="partialmodel.ecore#//May/MustExist"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="partialmodel.ecore#//Abs">
+      <genEnumLiterals ecoreEnumLiteral="partialmodel.ecore#//Abs/Particular"/>
+      <genEnumLiterals ecoreEnumLiteral="partialmodel.ecore#//Abs/Set"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="partialmodel.ecore#//Var">
+      <genEnumLiterals ecoreEnumLiteral="partialmodel.ecore#//Var/Constant"/>
+      <genEnumLiterals ecoreEnumLiteral="partialmodel.ecore#//Var/Variable"/>
+    </genEnums>
+    <genClasses ecoreClass="partialmodel.ecore#//PartialModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PartialModel/objects"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PartialModel/openworld"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PartialModel/AllAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="partialmodel.ecore#//PSReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSReference/targetObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PSReference/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSReference/psType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSReference/referredClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PSReference/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSReference/sourceObject"/>
+    </genClasses>
+    <genClasses ecoreClass="partialmodel.ecore#//PSObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSObject/refs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSObject/attributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PSObject/typeName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSObject/psType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PSObject/packageNsUri"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSObject/referredEClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PSObject/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="partialmodel.ecore#//PSAttribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSAttribute/psType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PSAttribute/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="partialmodel.ecore#//PSType"/>
+    <genClasses ecoreClass="partialmodel.ecore#//VarType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//VarType/Annotation"/>
+    </genClasses>
+    <genClasses ecoreClass="partialmodel.ecore#//MayType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//MayType/Annotation"/>
+    </genClasses>
+    <genClasses ecoreClass="partialmodel.ecore#//AbsType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//AbsType/Annotation"/>
+    </genClasses>
+    <genClasses ecoreClass="partialmodel.ecore#//PSString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PSString/value"/>
+    </genClasses>
+    <genClasses ecoreClass="partialmodel.ecore#//PSInteger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PSInteger/value"/>
+    </genClasses>
+    <genClasses ecoreClass="partialmodel.ecore#//PSBoolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PSBoolean/value"/>
+    </genClasses>
+    <genClasses ecoreClass="partialmodel.ecore#//Other">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference partialmodel.ecore#//Other/refferedClass"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
