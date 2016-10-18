@@ -676,73 +676,41 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G1t2YJPIEeaafbJ73woNwA" id="(0.49743589743589745,0.4942528735632184)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G1t2YZPIEeaafbJ73woNwA" id="(0.935672514619883,0.7931034482758621)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_bqfQYJPJEeaafbJ73woNwA" type="4001" element="_bqVfYJPJEeaafbJ73woNwA" source="_K83EMJPDEeaafbJ73woNwA" target="_nDjMoJPEEeaafbJ73woNwA">
-            <children xmi:type="notation:Node" xmi:id="_bqfQZJPJEeaafbJ73woNwA" type="6001">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bqfQZZPJEeaafbJ73woNwA" x="4" y="-9"/>
+          <edges xmi:type="notation:Edge" xmi:id="_y0r1QJVtEeaRAdWkO5VpVA" type="4001" element="_y0irUJVtEeaRAdWkO5VpVA" source="_zJeVQJPHEeaafbJ73woNwA" target="_kFcSMJPDEeaafbJ73woNwA">
+            <children xmi:type="notation:Node" xmi:id="_y0r1RJVtEeaRAdWkO5VpVA" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y0r1RZVtEeaRAdWkO5VpVA" y="-10"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_bqfQZpPJEeaafbJ73woNwA" type="6002">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bqfQZ5PJEeaafbJ73woNwA" x="-5" y="9"/>
+            <children xmi:type="notation:Node" xmi:id="_y0r1RpVtEeaRAdWkO5VpVA" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y0r1R5VtEeaRAdWkO5VpVA" y="10"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_bqfQaJPJEeaafbJ73woNwA" type="6003">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bqfQaZPJEeaafbJ73woNwA" x="-6" y="11"/>
+            <children xmi:type="notation:Node" xmi:id="_y0r1SJVtEeaRAdWkO5VpVA" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y0r1SZVtEeaRAdWkO5VpVA" y="10"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_bqfQYZPJEeaafbJ73woNwA"/>
-            <styles xmi:type="notation:FontStyle" xmi:id="_bqfQYpPJEeaafbJ73woNwA" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bqfQY5PJEeaafbJ73woNwA" points="[0, 0, 0, -35]$[0, 35, 0, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bqfQapPJEeaafbJ73woNwA" id="(0.31088082901554404,1.0)"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bqfQa5PJEeaafbJ73woNwA" id="(0.3287671232876712,0.0)"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_y0r1QZVtEeaRAdWkO5VpVA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_y0r1QpVtEeaRAdWkO5VpVA" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_y0r1Q5VtEeaRAdWkO5VpVA" points="[0, 0, 110, 0]$[-110, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y0r1SpVtEeaRAdWkO5VpVA" id="(0.0,0.4117647058823529)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y0r1S5VtEeaRAdWkO5VpVA" id="(1.0,0.4)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_etvmAJPJEeaafbJ73woNwA" type="4001" element="_etl1AJPJEeaafbJ73woNwA" source="_NDrmwJPDEeaafbJ73woNwA" target="_kFcSMJPDEeaafbJ73woNwA">
-            <children xmi:type="notation:Node" xmi:id="_etvmBJPJEeaafbJ73woNwA" type="6001">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_etvmBZPJEeaafbJ73woNwA" x="-1" y="-10"/>
+          <edges xmi:type="notation:Edge" xmi:id="_c2ylIJVuEeaRAdWkO5VpVA" type="4001" element="_c11i4JVuEeaRAdWkO5VpVA" source="_NDrmwJPDEeaafbJ73woNwA" target="_kFcSMJPDEeaafbJ73woNwA">
+            <children xmi:type="notation:Node" xmi:id="_c2ylJJVuEeaRAdWkO5VpVA" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c2ylJZVuEeaRAdWkO5VpVA" y="-10"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_etvmBpPJEeaafbJ73woNwA" type="6002">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_etvmB5PJEeaafbJ73woNwA" x="6" y="10"/>
+            <children xmi:type="notation:Node" xmi:id="_c2ylJpVuEeaRAdWkO5VpVA" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c2ylJ5VuEeaRAdWkO5VpVA" y="10"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_etvmCJPJEeaafbJ73woNwA" type="6003">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_etvmCZPJEeaafbJ73woNwA" x="-1" y="10"/>
+            <children xmi:type="notation:Node" xmi:id="_c2ylKJVuEeaRAdWkO5VpVA" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c2ylKZVuEeaRAdWkO5VpVA" y="10"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_etvmAZPJEeaafbJ73woNwA"/>
-            <styles xmi:type="notation:FontStyle" xmi:id="_etvmApPJEeaafbJ73woNwA" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_etvmA5PJEeaafbJ73woNwA" points="[0, 0, 0, -35]$[0, 35, 0, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_etvmCpPJEeaafbJ73woNwA" id="(0.38461538461538464,1.0)"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_etvmC5PJEeaafbJ73woNwA" id="(0.5,0.0)"/>
-          </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_oKnwIJPJEeaafbJ73woNwA" type="4001" element="_oKemMJPJEeaafbJ73woNwA" source="_K83EMJPDEeaafbJ73woNwA" target="_mhoZEJPJEeaafbJ73woNwA">
-            <children xmi:type="notation:Node" xmi:id="_oKnwJJPJEeaafbJ73woNwA" type="6001">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oKnwJZPJEeaafbJ73woNwA" y="-10"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_oKnwJpPJEeaafbJ73woNwA" type="6002">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oKnwJ5PJEeaafbJ73woNwA" y="10"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_oKnwKJPJEeaafbJ73woNwA" type="6003">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oKnwKZPJEeaafbJ73woNwA" y="10"/>
-            </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_oKnwIZPJEeaafbJ73woNwA"/>
-            <styles xmi:type="notation:FontStyle" xmi:id="_oKnwIpPJEeaafbJ73woNwA" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKnwI5PJEeaafbJ73woNwA" points="[0, 0, 0, -35]$[0, 35, 0, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oKnwKpPJEeaafbJ73woNwA" id="(0.7564766839378239,1.0)"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oKnwK5PJEeaafbJ73woNwA" id="(0.03278688524590164,0.0)"/>
-          </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_pMdnoJPJEeaafbJ73woNwA" type="4001" element="_pMSBcJPJEeaafbJ73woNwA" source="_zJeVQJPHEeaafbJ73woNwA" target="_kFcSMJPDEeaafbJ73woNwA">
-            <children xmi:type="notation:Node" xmi:id="_pMdnpJPJEeaafbJ73woNwA" type="6001">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pMdnpZPJEeaafbJ73woNwA" x="5" y="-10"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_pMdnppPJEeaafbJ73woNwA" type="6002">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pMdnp5PJEeaafbJ73woNwA" x="-3" y="11"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_pMdnqJPJEeaafbJ73woNwA" type="6003">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pMdnqZPJEeaafbJ73woNwA" x="-3" y="10"/>
-            </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_pMdnoZPJEeaafbJ73woNwA"/>
-            <styles xmi:type="notation:FontStyle" xmi:id="_pMdnopPJEeaafbJ73woNwA" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pMdno5PJEeaafbJ73woNwA" points="[0, 0, 110, -5]$[-110, 5, 0, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pMdnqpPJEeaafbJ73woNwA" id="(0.0,0.37254901960784315)"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pMdnq5PJEeaafbJ73woNwA" id="(1.0,0.5)"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_c2ylIZVuEeaRAdWkO5VpVA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_c2ylIpVuEeaRAdWkO5VpVA" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_c2ylI5VuEeaRAdWkO5VpVA" points="[0, 0, 0, -35]$[0, 35, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_c2ylKpVuEeaRAdWkO5VpVA" id="(0.38461538461538464,1.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_c2ylK5VuEeaRAdWkO5VpVA" id="(0.5,0.0)"/>
           </edges>
         </data>
       </ownedAnnotationEntries>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_K8ge4JPDEeaafbJ73woNwA" name="object2" outgoingEdges="_1rrMQJPHEeaafbJ73woNwA _bqVfYJPJEeaafbJ73woNwA _oKemMJPJEeaafbJ73woNwA">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_K8ge4JPDEeaafbJ73woNwA" name="object2" outgoingEdges="_1rrMQJPHEeaafbJ73woNwA">
         <target xmi:type="partialmodel:PSObject" href="My2.partialmodel#//@objects.0"/>
         <semanticElements xmi:type="partialmodel:PSObject" href="My2.partialmodel#//@objects.0"/>
         <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_LrEOAJPDEeaafbJ73woNwA" name="MayExist" width="8" height="2" resizeKind="NSEW">
@@ -761,7 +729,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_NDh1wJPDEeaafbJ73woNwA" name="object1" outgoingEdges="_etl1AJPJEeaafbJ73woNwA" incomingEdges="_1rrMQJPHEeaafbJ73woNwA">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_NDh1wJPDEeaafbJ73woNwA" name="object1" outgoingEdges="_c11i4JVuEeaRAdWkO5VpVA" incomingEdges="_1rrMQJPHEeaafbJ73woNwA">
         <target xmi:type="partialmodel:PSObject" href="My2.partialmodel#//@objects.1"/>
         <semanticElements xmi:type="partialmodel:PSObject" href="My2.partialmodel#//@objects.1"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -772,7 +740,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_kFShMJPDEeaafbJ73woNwA" name="Type: vv" incomingEdges="_etl1AJPJEeaafbJ73woNwA _pMSBcJPJEeaafbJ73woNwA" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_kFShMJPDEeaafbJ73woNwA" name="Type: vv" incomingEdges="_y0irUJVtEeaRAdWkO5VpVA _c11i4JVuEeaRAdWkO5VpVA" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="partialmodel:PSOtherAttribute" href="My2.partialmodel#//@AllAttributes.0"/>
         <semanticElements xmi:type="partialmodel:PSOtherAttribute" href="My2.partialmodel#//@AllAttributes.0"/>
         <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_jJDF8JPEEeaafbJ73woNwA" name="MayExist" width="8" height="2" resizeKind="NSEW">
@@ -791,7 +759,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@nodeMappings[name='attribute']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_nDZboJPEEeaafbJ73woNwA" name="Type: " incomingEdges="_bqVfYJPJEeaafbJ73woNwA" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_nDZboJPEEeaafbJ73woNwA" name="Type: " width="3" height="3" resizeKind="NSEW">
         <target xmi:type="partialmodel:PSOtherAttribute" href="My2.partialmodel#//@AllAttributes.1"/>
         <semanticElements xmi:type="partialmodel:PSOtherAttribute" href="My2.partialmodel#//@AllAttributes.1"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -802,7 +770,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@nodeMappings[name='attribute']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mheoEJPJEeaafbJ73woNwA" name="Type: " incomingEdges="_oKemMJPJEeaafbJ73woNwA" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mheoEJPJEeaafbJ73woNwA" name="Type: " width="3" height="3" resizeKind="NSEW">
         <target xmi:type="partialmodel:PSOtherAttribute" href="My2.partialmodel#//@AllAttributes.2"/>
         <semanticElements xmi:type="partialmodel:PSOtherAttribute" href="My2.partialmodel#//@AllAttributes.2"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -813,7 +781,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@nodeMappings[name='attribute']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_zJLaUJPHEeaafbJ73woNwA" name="object3" outgoingEdges="_pMSBcJPJEeaafbJ73woNwA">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_zJLaUJPHEeaafbJ73woNwA" name="object3" outgoingEdges="_y0irUJVtEeaRAdWkO5VpVA">
         <target xmi:type="partialmodel:PSObject" href="My2.partialmodel#//@objects.2"/>
         <semanticElements xmi:type="partialmodel:PSObject" href="My2.partialmodel#//@objects.2"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -833,39 +801,21 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToObject']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_bqVfYJPJEeaafbJ73woNwA" name="attr1" sourceNode="_K8ge4JPDEeaafbJ73woNwA" targetNode="_nDZboJPEEeaafbJ73woNwA">
-        <target xmi:type="partialmodel:PSReferenceToAttribute" href="My2.partialmodel#//@objects.0/@attributes.0"/>
-        <semanticElements xmi:type="partialmodel:PSReferenceToAttribute" href="My2.partialmodel#//@objects.0/@attributes.0"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_bqVfYZPJEeaafbJ73woNwA" targetArrow="NoDecoration" foldingStyle="SOURCE" size="2">
-          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToAttribute']/@style"/>
-          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_bqVfYpPJEeaafbJ73woNwA"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToAttribute']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_etl1AJPJEeaafbJ73woNwA" name="attr1" sourceNode="_NDh1wJPDEeaafbJ73woNwA" targetNode="_kFShMJPDEeaafbJ73woNwA">
-        <target xmi:type="partialmodel:PSReferenceToAttribute" href="My2.partialmodel#//@objects.1/@attributes.0"/>
-        <semanticElements xmi:type="partialmodel:PSReferenceToAttribute" href="My2.partialmodel#//@objects.1/@attributes.0"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_etl1AZPJEeaafbJ73woNwA" targetArrow="NoDecoration" foldingStyle="SOURCE" size="2">
-          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToAttribute']/@style"/>
-          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_etl1ApPJEeaafbJ73woNwA"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToAttribute']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_oKemMJPJEeaafbJ73woNwA" name="attr2" sourceNode="_K8ge4JPDEeaafbJ73woNwA" targetNode="_mheoEJPJEeaafbJ73woNwA">
-        <target xmi:type="partialmodel:PSReferenceToAttribute" href="My2.partialmodel#//@objects.0/@attributes.1"/>
-        <semanticElements xmi:type="partialmodel:PSReferenceToAttribute" href="My2.partialmodel#//@objects.0/@attributes.1"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_oKemMZPJEeaafbJ73woNwA" targetArrow="NoDecoration" foldingStyle="SOURCE" size="2">
-          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToAttribute']/@style"/>
-          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_oKemMpPJEeaafbJ73woNwA"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToAttribute']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_pMSBcJPJEeaafbJ73woNwA" name="attr1" sourceNode="_zJLaUJPHEeaafbJ73woNwA" targetNode="_kFShMJPDEeaafbJ73woNwA">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_y0irUJVtEeaRAdWkO5VpVA" name="attr1" sourceNode="_zJLaUJPHEeaafbJ73woNwA" targetNode="_kFShMJPDEeaafbJ73woNwA">
         <target xmi:type="partialmodel:PSReferenceToAttribute" href="My2.partialmodel#//@objects.2/@attributes.0"/>
         <semanticElements xmi:type="partialmodel:PSReferenceToAttribute" href="My2.partialmodel#//@objects.2/@attributes.0"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_pMSBcZPJEeaafbJ73woNwA" targetArrow="NoDecoration" foldingStyle="SOURCE" size="2">
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_y0irUZVtEeaRAdWkO5VpVA" targetArrow="NoDecoration" foldingStyle="SOURCE" size="2">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToAttribute']/@style"/>
-          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_pMSBcpPJEeaafbJ73woNwA"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_y0irUpVtEeaRAdWkO5VpVA"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c11i4JVuEeaRAdWkO5VpVA" name="(MayExist) attr1" sourceNode="_NDh1wJPDEeaafbJ73woNwA" targetNode="_kFShMJPDEeaafbJ73woNwA">
+        <target xmi:type="partialmodel:PSReferenceToAttribute" href="My2.partialmodel#//@objects.1/@attributes.0"/>
+        <semanticElements xmi:type="partialmodel:PSReferenceToAttribute" href="My2.partialmodel#//@objects.1/@attributes.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_c2Id0JVuEeaRAdWkO5VpVA" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToAttribute']/@conditionnalStyles.0/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_c2Id0ZVuEeaRAdWkO5VpVA"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.pdeim.partialmodel.design/description/project.odesign#//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@edgeMappings[name='referenceToAttribute']"/>
       </ownedDiagramElements>

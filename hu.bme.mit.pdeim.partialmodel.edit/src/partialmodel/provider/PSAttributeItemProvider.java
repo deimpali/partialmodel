@@ -64,6 +64,7 @@ public class PSAttributeItemProvider
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
+			addReferencesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -86,6 +87,28 @@ public class PSAttributeItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the References feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReferencesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PSAttribute_references_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PSAttribute_references_feature", "_UI_PSAttribute_type"),
+				 PartialmodelPackage.Literals.PS_ATTRIBUTE__REFERENCES,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

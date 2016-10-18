@@ -305,13 +305,22 @@ public interface PartialmodelPackage extends EPackage {
 	int PS_ATTRIBUTE__TYPE = 1;
 
 	/**
+	 * The feature id for the '<em><b>References</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_ATTRIBUTE__REFERENCES = 2;
+
+	/**
 	 * The number of structural features of the '<em>PS Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PS_ATTRIBUTE_FEATURE_COUNT = 2;
+	int PS_ATTRIBUTE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>PS Attribute</em>' class.
@@ -490,6 +499,15 @@ public interface PartialmodelPackage extends EPackage {
 	int PS_STRING__TYPE = PS_ATTRIBUTE__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>References</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_STRING__REFERENCES = PS_ATTRIBUTE__REFERENCES;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -543,6 +561,15 @@ public interface PartialmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int PS_INTEGER__TYPE = PS_ATTRIBUTE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>References</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_INTEGER__REFERENCES = PS_ATTRIBUTE__REFERENCES;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -600,6 +627,15 @@ public interface PartialmodelPackage extends EPackage {
 	int PS_BOOLEAN__TYPE = PS_ATTRIBUTE__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>References</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_BOOLEAN__REFERENCES = PS_ATTRIBUTE__REFERENCES;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -653,6 +689,15 @@ public interface PartialmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int PS_OTHER_ATTRIBUTE__TYPE = PS_ATTRIBUTE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>References</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_OTHER_ATTRIBUTE__REFERENCES = PS_ATTRIBUTE__REFERENCES;
 
 	/**
 	 * The feature id for the '<em><b>Reffered Class</b></em>' reference.
@@ -1104,6 +1149,17 @@ public interface PartialmodelPackage extends EPackage {
 	EAttribute getPSAttribute_Type();
 
 	/**
+	 * Returns the meta object for the reference list '{@link partialmodel.PSAttribute#getReferences <em>References</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>References</em>'.
+	 * @see partialmodel.PSAttribute#getReferences()
+	 * @see #getPSAttribute()
+	 * @generated
+	 */
+	EReference getPSAttribute_References();
+
+	/**
 	 * Returns the meta object for class '{@link partialmodel.PSType <em>PS Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1530,6 +1586,14 @@ public interface PartialmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PS_ATTRIBUTE__TYPE = eINSTANCE.getPSAttribute_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>References</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PS_ATTRIBUTE__REFERENCES = eINSTANCE.getPSAttribute_References();
 
 		/**
 		 * The meta object literal for the '{@link partialmodel.impl.PSTypeImpl <em>PS Type</em>}' class.

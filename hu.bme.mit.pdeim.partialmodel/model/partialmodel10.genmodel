@@ -43,7 +43,6 @@
     <genClasses image="false" ecoreClass="partialmodel.ecore#//PSAttribute">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSAttribute/psType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute partialmodel.ecore#//PSAttribute/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference partialmodel.ecore#//PSAttribute/references"/>
     </genClasses>
     <genClasses image="false" ecoreClass="partialmodel.ecore#//PSType"/>
     <genClasses ecoreClass="partialmodel.ecore#//VarType">

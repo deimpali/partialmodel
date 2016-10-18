@@ -14,8 +14,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import partialmodel.PSAttribute;
+import partialmodel.PSReference;
 import partialmodel.PSType;
 import partialmodel.PartialmodelPackage;
 
@@ -29,6 +31,7 @@ import partialmodel.PartialmodelPackage;
  * <ul>
  *   <li>{@link partialmodel.impl.PSAttributeImpl#getPsType <em>Ps Type</em>}</li>
  *   <li>{@link partialmodel.impl.PSAttributeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link partialmodel.impl.PSAttributeImpl#getReferences <em>References</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,6 +66,16 @@ public abstract class PSAttributeImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getReferences() <em>References</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferences()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PSReference> references;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,6 +134,18 @@ public abstract class PSAttributeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<PSReference> getReferences() {
+		if (references == null) {
+			references = new EObjectResolvingEList<PSReference>(PSReference.class, this, PartialmodelPackage.PS_ATTRIBUTE__REFERENCES);
+		}
+		return references;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -142,6 +167,8 @@ public abstract class PSAttributeImpl extends MinimalEObjectImpl.Container imple
 				return getPsType();
 			case PartialmodelPackage.PS_ATTRIBUTE__TYPE:
 				return getType();
+			case PartialmodelPackage.PS_ATTRIBUTE__REFERENCES:
+				return getReferences();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,6 +189,10 @@ public abstract class PSAttributeImpl extends MinimalEObjectImpl.Container imple
 			case PartialmodelPackage.PS_ATTRIBUTE__TYPE:
 				setType((String)newValue);
 				return;
+			case PartialmodelPackage.PS_ATTRIBUTE__REFERENCES:
+				getReferences().clear();
+				getReferences().addAll((Collection<? extends PSReference>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -180,6 +211,9 @@ public abstract class PSAttributeImpl extends MinimalEObjectImpl.Container imple
 			case PartialmodelPackage.PS_ATTRIBUTE__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
+			case PartialmodelPackage.PS_ATTRIBUTE__REFERENCES:
+				getReferences().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -196,6 +230,8 @@ public abstract class PSAttributeImpl extends MinimalEObjectImpl.Container imple
 				return psType != null && !psType.isEmpty();
 			case PartialmodelPackage.PS_ATTRIBUTE__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+			case PartialmodelPackage.PS_ATTRIBUTE__REFERENCES:
+				return references != null && !references.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

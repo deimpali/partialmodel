@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link partialmodel.PSAttribute#getPsType <em>Ps Type</em>}</li>
  *   <li>{@link partialmodel.PSAttribute#getType <em>Type</em>}</li>
+ *   <li>{@link partialmodel.PSAttribute#getReferences <em>References</em>}</li>
  * </ul>
  *
  * @see partialmodel.PartialmodelPackage#getPSAttribute()
@@ -64,5 +65,21 @@ public interface PSAttribute extends EObject {
 	 * @generated
 	 */
 	void setType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>References</b></em>' reference list.
+	 * The list contents are of type {@link partialmodel.PSReference}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>References</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>References</em>' reference list.
+	 * @see partialmodel.PartialmodelPackage#getPSAttribute_References()
+	 * @model
+	 * @generated
+	 */
+	EList<PSReference> getReferences();
 
 } // PSAttribute
