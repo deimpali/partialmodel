@@ -68,7 +68,7 @@ public interface PSAttribute extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>References</b></em>' reference list.
-	 * The list contents are of type {@link partialmodel.PSReference}.
+	 * The list contents are of type {@link partialmodel.PSReferenceToAttribute}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>References</em>' reference list isn't clear,
@@ -80,6 +80,6 @@ public interface PSAttribute extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<PSReference> getReferences();
+	EList<PSReferenceToAttribute> getReferences();
 
 } // PSAttribute

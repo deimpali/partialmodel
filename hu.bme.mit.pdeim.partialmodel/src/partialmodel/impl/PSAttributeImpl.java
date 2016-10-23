@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import partialmodel.PSAttribute;
-import partialmodel.PSReference;
+import partialmodel.PSReferenceToAttribute;
 import partialmodel.PSType;
 import partialmodel.PartialmodelPackage;
 
@@ -75,7 +75,7 @@ public abstract class PSAttributeImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PSReference> references;
+	protected EList<PSReferenceToAttribute> references;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,9 +134,9 @@ public abstract class PSAttributeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PSReference> getReferences() {
+	public EList<PSReferenceToAttribute> getReferences() {
 		if (references == null) {
-			references = new EObjectResolvingEList<PSReference>(PSReference.class, this, PartialmodelPackage.PS_ATTRIBUTE__REFERENCES);
+			references = new EObjectResolvingEList<PSReferenceToAttribute>(PSReferenceToAttribute.class, this, PartialmodelPackage.PS_ATTRIBUTE__REFERENCES);
 		}
 		return references;
 	}
@@ -191,7 +191,7 @@ public abstract class PSAttributeImpl extends MinimalEObjectImpl.Container imple
 				return;
 			case PartialmodelPackage.PS_ATTRIBUTE__REFERENCES:
 				getReferences().clear();
-				getReferences().addAll((Collection<? extends PSReference>)newValue);
+				getReferences().addAll((Collection<? extends PSReferenceToAttribute>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
