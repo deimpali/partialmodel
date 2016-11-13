@@ -7,4 +7,11 @@
 	       name="project">
     </component>
   </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="hu.bme.mit.pdeim.partialmodel.design.helpers.PartialitySolver"
+           id="hu.bme.mit.pdeim.partialmodel.design.helpers.PartialitySolver">
+     </javaActions>
+  </extension>
 </plugin>

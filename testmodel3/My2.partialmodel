@@ -4,14 +4,25 @@
     <refs name="ref1" sourceObject="//@objects.0" targetObject="//@objects.1">
       <psType xsi:type="partialmodel:MayType"/>
     </refs>
+    <refs type="scds" name="asas" sourceObject="//@objects.0" targetObject="//@objects.2">
+      <psType xsi:type="partialmodel:AbsType"/>
+    </refs>
+    <refs type="scds" name="asas v" sourceObject="//@objects.0" targetObject="//@objects.2"/>
     <attributes name="attr1" sourceObject="//@objects.0" targetAttribute="//@AllAttributes.1">
       <psType xsi:type="partialmodel:MayType"/>
       <psType xsi:type="partialmodel:AbsType"/>
     </attributes>
+    <psType xsi:type="partialmodel:MayType" parent="//@objects.0"/>
   </objects>
   <objects name="object2">
     <attributes name="attr1" sourceObject="//@objects.1" targetAttribute="//@AllAttributes.0"/>
+    <psType xsi:type="partialmodel:VarType" parent="//@objects.1"/>
+    <psType xsi:type="partialmodel:AbsType" parent="//@objects.1"/>
   </objects>
+  <objects name="object3"/>
   <AllAttributes xsi:type="partialmodel:PSOtherAttribute" type="Tjlkype: " references="//@objects.1/@attributes.0"/>
-  <AllAttributes xsi:type="partialmodel:PSOtherAttribute" references="//@objects.0/@attributes.0"/>
+  <AllAttributes xsi:type="partialmodel:PSOtherAttribute" references="//@objects.0/@attributes.0">
+    <psType xsi:type="partialmodel:MayType" parent="//@AllAttributes.1"/>
+  </AllAttributes>
+  <AllAttributes xsi:type="partialmodel:PSOtherAttribute" type="type"/>
 </partialmodel:PartialModel>

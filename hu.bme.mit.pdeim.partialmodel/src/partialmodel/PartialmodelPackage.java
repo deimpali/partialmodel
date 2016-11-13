@@ -342,13 +342,22 @@ public interface PartialmodelPackage extends EPackage {
 	int PS_TYPE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_TYPE__PARENT = 0;
+
+	/**
 	 * The number of structural features of the '<em>PS Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PS_TYPE_FEATURE_COUNT = 0;
+	int PS_TYPE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>PS Type</em>' class.
@@ -368,6 +377,15 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 */
 	int VAR_TYPE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VAR_TYPE__PARENT = PS_TYPE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Annotation</b></em>' attribute.
@@ -407,6 +425,15 @@ public interface PartialmodelPackage extends EPackage {
 	int MAY_TYPE = 6;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAY_TYPE__PARENT = PS_TYPE__PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Annotation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -442,6 +469,15 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 */
 	int ABS_TYPE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABS_TYPE__PARENT = PS_TYPE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Annotation</b></em>' attribute.
@@ -1170,6 +1206,17 @@ public interface PartialmodelPackage extends EPackage {
 	EClass getPSType();
 
 	/**
+	 * Returns the meta object for the reference '{@link partialmodel.PSType#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see partialmodel.PSType#getParent()
+	 * @see #getPSType()
+	 * @generated
+	 */
+	EReference getPSType_Parent();
+
+	/**
 	 * Returns the meta object for class '{@link partialmodel.VarType <em>Var Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1604,6 +1651,14 @@ public interface PartialmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PS_TYPE = eINSTANCE.getPSType();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PS_TYPE__PARENT = eINSTANCE.getPSType_Parent();
 
 		/**
 		 * The meta object literal for the '{@link partialmodel.impl.VarTypeImpl <em>Var Type</em>}' class.

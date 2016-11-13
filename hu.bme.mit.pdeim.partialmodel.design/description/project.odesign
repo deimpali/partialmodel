@@ -4,7 +4,7 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="PartialModel Diagram" domainClass="partialmodel.PartialModel">
       <defaultLayer name="Default">
         <nodeMappings name="attribute" deletionDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Attribute']" labelDirectEdit="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editAttributeType']" semanticCandidatesExpression="[objects.attributes->addAll(AllAttributes)/]" domainClass="partialmodel.PSAttribute">
-          <borderedNodeMappings name="partialityForAttribute" semanticCandidatesExpression="feature:psType" domainClass="partialmodel.PSType">
+          <borderedNodeMappings name="partialityForAttribute" semanticCandidatesExpression="feature:psType" doubleClickDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='attribute%20pstype']" domainClass="partialmodel.PSType">
             <style xsi:type="style:SquareDescription" labelExpression="aql:self.eGet('Annotation')" labelPosition="node" resizeKind="NSEW" width="8" height="2">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -23,7 +23,7 @@
         <edgeMappings name="referenceToObject" doubleClickDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Reference%20navigation']" sourceMapping="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']" targetMapping="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']" targetFinderExpression="feature:targetObject" sourceFinderExpression="feature:sourceObject" domainClass="partialmodel.PSReferenceToObject" useDomainElement="true" reconnections="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='referenceTargetObject']">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelExpression="aql: self.psType->toString()">
+            <centerLabelStyleDescription labelExpression="feature:name">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -85,7 +85,7 @@
           </conditionnalStyles>
         </edgeMappings>
         <containerMappings name="object" labelDirectEdit="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='objectName']" semanticCandidatesExpression="feature:objects" domainClass="partialmodel.PSObject" childrenPresentation="List">
-          <borderedNodeMappings name="partailityForObj" semanticCandidatesExpression="feature:psType" domainClass="partialmodel.PSType">
+          <borderedNodeMappings name="partailityForObj" semanticCandidatesExpression="feature:psType" doubleClickDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='object%20pstype']" domainClass="partialmodel.PSType">
             <style xsi:type="style:SquareDescription" labelExpression="aql:self.eGet('Annotation')" labelPosition="node" resizeKind="NSEW" width="8" height="2">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -126,7 +126,7 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.PSOtherAttribute" referenceName="AllAttributes">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:0"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="typeName"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -142,7 +142,11 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.MayType" referenceName="psType"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.MayType" referenceName="psType">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="parent" valueExpression="var:container"/>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -151,7 +155,12 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.AbsType" referenceName="psType"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.AbsType" referenceName="psType">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="parent" valueExpression="var:container"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Annotation" valueExpression="Set"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -160,7 +169,12 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.VarType" referenceName="psType"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.VarType" referenceName="psType">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="parent" valueExpression="var:container"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Annotation" valueExpression="Variable"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -255,13 +269,90 @@
               <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='Reference%20Diagram']"/>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="object pstype" mappings="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@containerMappings[name='object']/@borderedNodeMappings[name='partailityForObj']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:Switch">
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::AbsType)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer().eContainer()">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.PSObject" referenceName="objects">
+                      <subModelOperations xsi:type="tool_1:For" expression="aql:element.eContainer().refs">
+                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                          <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.PSReferenceToObject" referenceName="refs" variableName="instance2">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance2">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="sourceObject" valueExpression="var:instance"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="targetObject" valueExpression="aql: i.targetObject"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: i.name + ' v'"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql: i.type"/>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:element.eContainer().name + ' v'"/>
+                      <subModelOperations xsi:type="tool_1:For" expression="aql:element.eContainer().attributes">
+                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                          <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.PSReferenceToAttribute" referenceName="attributes" variableName="instance3">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance3">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="sourceObject" valueExpression="var:instance"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="targetAttribute" valueExpression="aql: i.targetAttribute"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: i.name + ' v'"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql: i.type"/>
+                            </subModelOperations>
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: i.targetAttribute">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="references" valueExpression="var:instance3"/>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::MayType)">
+                  <subModelOperations xsi:type="tool_1:ExternalJavaAction" name="test" id="hu.bme.mit.pdeim.partialmodel.design.helpers.PartialitySolver">
+                    <parameters name="parent" value="var:self"/>
+                  </subModelOperations>
+                </cases>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="attribute pstype" mappings="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@nodeMappings[name='attribute']/@borderedNodeMappings[name='partialityForAttribute']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:Switch">
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::AbsType)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer().eContainer()">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.PSOtherAttribute" referenceName="AllAttributes">
+                      <subModelOperations xsi:type="tool_1:For" expression="aql:element.eContainer().references">
+                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: i.sourceObject">
+                          <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.PSReferenceToAttribute" referenceName="attributes" variableName="instance2">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance2">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="sourceObject" valueExpression="aql: i.sourceObject"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="targetAttribute" valueExpression="var:instance"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: i.name + ' v'"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql: i.type"/>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="references" valueExpression="var:instance2"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql:element.eContainer().type"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Reference Diagram" domainClass="partialmodel.PSReference" enablePopupBars="true">
       <defaultLayer name="Default">
         <containerMappings name="Reference" semanticCandidatesExpression="var:self" domainClass="partialmodel.PSReference">
-          <borderedNodeMappings name="partailityForReference" semanticCandidatesExpression="feature:psType" domainClass="partialmodel.PSType">
+          <borderedNodeMappings name="partailityForReference" semanticCandidatesExpression="feature:psType" doubleClickDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='Reference%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='reference%20pstype']" domainClass="partialmodel.PSType">
             <style xsi:type="style:SquareDescription" labelExpression="aql:self.eGet('Annotation')" labelPosition="node" resizeKind="NSEW" width="8" height="2">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -303,6 +394,24 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.VarType" referenceName="psType"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="reference pstype" mappings="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='Reference%20Diagram']/@defaultLayer/@containerMappings[name='Reference']/@borderedNodeMappings[name='partailityForReference']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:Switch">
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::AbsType) and element.eContainer().oclIsKindOf(partialmodel::PSReferenceToObject)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer().sourceObject">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.PSReferenceToObject" referenceName="refs">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql: element.eContainer().type"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="targetObject" valueExpression="aql: element.eContainer().targetObject"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="sourceObject" valueExpression="aql: element.eContainer().sourceObject"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: element.eContainer().name + ' v'"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

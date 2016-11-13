@@ -433,6 +433,15 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPSType_Parent() {
+		return (EReference)psTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVarType() {
 		return varTypeEClass;
 	}
@@ -672,6 +681,7 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 		createEReference(psAttributeEClass, PS_ATTRIBUTE__REFERENCES);
 
 		psTypeEClass = createEClass(PS_TYPE);
+		createEReference(psTypeEClass, PS_TYPE__PARENT);
 
 		varTypeEClass = createEClass(VAR_TYPE);
 		createEAttribute(varTypeEClass, VAR_TYPE__ANNOTATION);
@@ -775,6 +785,7 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 		initEReference(getPSAttribute_References(), this.getPSReferenceToAttribute(), null, "references", null, 0, -1, PSAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(psTypeEClass, PSType.class, "PSType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPSType_Parent(), ecorePackage.getEObject(), null, "parent", null, 0, 1, PSType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(varTypeEClass, VarType.class, "VarType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVarType_Annotation(), this.getVar(), "Annotation", null, 0, 1, VarType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
