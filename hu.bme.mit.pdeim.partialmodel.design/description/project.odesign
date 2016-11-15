@@ -309,8 +309,15 @@
                   </subModelOperations>
                 </cases>
                 <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::MayType)">
-                  <subModelOperations xsi:type="tool_1:ExternalJavaAction" name="test" id="hu.bme.mit.pdeim.partialmodel.design.helpers.PartialitySolver">
-                    <parameters name="parent" value="var:self"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer()">
+                    <subModelOperations xsi:type="tool_1:For" expression="aql:element.eContainer().attributes">
+                      <subModelOperations xsi:type="tool_1:If" conditionExpression="aql: i.targetAttribute.references->size() &lt;2">
+                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: i.targetAttribute">
+                          <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
                   </subModelOperations>
                 </cases>
               </firstModelOperations>
@@ -341,6 +348,16 @@
                       </subModelOperations>
                       <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql:element.eContainer().type"/>
                     </subModelOperations>
+                  </subModelOperations>
+                </cases>
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::MayType)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer()">
+                    <subModelOperations xsi:type="tool_1:For" expression="aql: self.references">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:i">
+                        <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
                   </subModelOperations>
                 </cases>
               </firstModelOperations>
@@ -410,6 +427,16 @@
                       <subModelOperations xsi:type="tool_1:SetValue" featureName="sourceObject" valueExpression="aql: element.eContainer().sourceObject"/>
                       <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: element.eContainer().name + ' v'"/>
                     </subModelOperations>
+                  </subModelOperations>
+                </cases>
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::MayType) and element.eContainer().oclIsKindOf(partialmodel::PSReferenceToAttribute)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer().targetAttribute">
+                    <subModelOperations xsi:type="tool_1:If" conditionExpression="aql: element.eContainer().targetAttribute.references->size() &lt; 2">
+                      <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer()">
+                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
                   </subModelOperations>
                 </cases>
               </firstModelOperations>
