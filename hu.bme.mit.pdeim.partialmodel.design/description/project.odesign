@@ -320,6 +320,51 @@
                     <subModelOperations xsi:type="tool_1:RemoveElement"/>
                   </subModelOperations>
                 </cases>
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::VarType)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer().eContainer()">
+                    <subModelOperations xsi:type="tool_1:For" expression="aql: self.objects" iteratorName="obj">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:obj">
+                        <subModelOperations xsi:type="tool_1:For" expression="aql: obj.psType" iteratorName="psType">
+                          <subModelOperations xsi:type="tool_1:If" conditionExpression="aql: psType.oclIsKindOf(partialmodel::VarType) and psType.id = element.id and psType != element">
+                            <subModelOperations xsi:type="tool_1:For" expression="aql: obj.refs" iteratorName="ref">
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.eContainer()">
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PSReferenceToObject" referenceName="refs">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: ref.name"/>
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql: ref.type"/>
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="referredClass" valueExpression="aql: ref.referredClass"/>
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="targetObject" valueExpression="aql: ref.targetObject"/>
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="sourceObject" valueExpression="aql: element.eContainer()"/>
+                                </subModelOperations>
+                              </subModelOperations>
+                              <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                            </subModelOperations>
+                            <subModelOperations xsi:type="tool_1:For" expression="aql: obj.attributes" iteratorName="attr">
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer()">
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PSReferenceToAttribute" referenceName="attributes">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: attr.name"/>
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql: attr.type"/>
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="referredClass" valueExpression="aql: attr.referredClass"/>
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="sourceObject" valueExpression="aql: element.eContainer()"/>
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="targetAttribute" valueExpression="aql: attr.targetAttribute"/>
+                                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: attr.targetAttribute">
+                                    <subModelOperations xsi:type="tool_1:SetValue" featureName="references" valueExpression="var:instance"/>
+                                  </subModelOperations>
+                                </subModelOperations>
+                              </subModelOperations>
+                              <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                            </subModelOperations>
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:obj">
+                              <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                            </subModelOperations>
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                              <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -360,6 +405,32 @@
                     <subModelOperations xsi:type="tool_1:RemoveElement"/>
                   </subModelOperations>
                 </cases>
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::VarType)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer().eContainer()">
+                    <subModelOperations xsi:type="tool_1:For" expression="aql: self.AllAttributes" iteratorName="attr">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:attr">
+                        <subModelOperations xsi:type="tool_1:For" expression="aql: attr.psType" iteratorName="psType">
+                          <subModelOperations xsi:type="tool_1:If" conditionExpression="aql: psType.oclIsKindOf(partialmodel::VarType) and psType.id = element.id and psType != element">
+                            <subModelOperations xsi:type="tool_1:For" expression="aql: attr.references" iteratorName="ref">
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:ref">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="targetAttribute" valueExpression="aql: element.eContainer()"/>
+                              </subModelOperations>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer()">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="references" valueExpression="var:ref"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:attr">
+                              <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                            </subModelOperations>
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                              <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -391,7 +462,7 @@
       <defaultLayer name="Default">
         <containerMappings name="Reference" semanticCandidatesExpression="var:self" domainClass="partialmodel.PSReference">
           <borderedNodeMappings name="partailityForReference" semanticCandidatesExpression="feature:psType" doubleClickDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='Reference%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='reference%20pstype']" domainClass="partialmodel.PSType">
-            <style xsi:type="style:SquareDescription" labelExpression="aql:self.eGet('Annotation')" labelPosition="node" resizeKind="NSEW" width="8" height="2">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.eGet('Annotation')" labelPosition="node" resizeKind="NSEW" width="8" height="2">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <forbiddenSides>SOUTH</forbiddenSides>
@@ -422,7 +493,9 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.AbsType" referenceName="psType"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.AbsType" referenceName="psType">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Annotation" valueExpression="Set"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -431,7 +504,9 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.VarType" referenceName="psType"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.VarType" referenceName="psType">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Annotation" valueExpression="Variable"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -458,6 +533,50 @@
                   </subModelOperations>
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer()">
                     <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                  </subModelOperations>
+                </cases>
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::MayType) and element.eContainer().oclIsKindOf(partialmodel::PSReferenceToObject)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer()">
+                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                  </subModelOperations>
+                </cases>
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::AbsType) and element.eContainer().oclIsKindOf(partialmodel::PSReferenceToAttribute)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer().sourceObject">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="partialmodel.PSReferenceToAttribute" referenceName="attributes">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql: element.eContainer().type"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="targetAttribute" valueExpression="aql: element.eContainer().targetAttribute"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="sourceObject" valueExpression="aql: element.eContainer().sourceObject"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: element.eContainer().name + ' v'"/>
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:instance.targetAttribute">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="references" valueExpression="var:instance"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::VarType) and element.eContainer().oclIsKindOf(partialmodel::PSReferenceToAttribute)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer().sourceObject">
+                    <subModelOperations xsi:type="tool_1:For" expression="aql: self.attributes" iteratorName="attr">
+                      <subModelOperations xsi:type="tool_1:For" expression="aql: attr.psType" iteratorName="psType">
+                        <subModelOperations xsi:type="tool_1:If" conditionExpression="aql: psType.oclIsKindOf(partialmodel::VarType) and psType.id = element.id and psType != element">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:attr">
+                            <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
+                <cases conditionExpression="aql: element.oclIsKindOf(partialmodel::VarType) and element.eContainer().oclIsKindOf(partialmodel::PSReferenceToObject)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.eContainer().sourceObject">
+                    <subModelOperations xsi:type="tool_1:For" expression="aql: self.refs" iteratorName="ref">
+                      <subModelOperations xsi:type="tool_1:For" expression="aql: ref.psType" iteratorName="psType">
+                        <subModelOperations xsi:type="tool_1:If" conditionExpression="aql: psType.oclIsKindOf(partialmodel::VarType) and psType.id = element.id and psType != element">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:ref">
+                            <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
                   </subModelOperations>
                 </cases>
               </firstModelOperations>
