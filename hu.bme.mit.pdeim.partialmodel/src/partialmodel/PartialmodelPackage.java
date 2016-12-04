@@ -214,22 +214,13 @@ public interface PartialmodelPackage extends EPackage {
 	int PS_OBJECT__ATTRIBUTES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Type Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PS_OBJECT__TYPE_NAME = 2;
-
-	/**
 	 * The feature id for the '<em><b>Ps Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PS_OBJECT__PS_TYPE = 3;
+	int PS_OBJECT__PS_TYPE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Package Ns Uri</b></em>' attribute.
@@ -238,7 +229,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PS_OBJECT__PACKAGE_NS_URI = 4;
+	int PS_OBJECT__PACKAGE_NS_URI = 3;
 
 	/**
 	 * The feature id for the '<em><b>Referred EClass</b></em>' reference.
@@ -247,7 +238,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PS_OBJECT__REFERRED_ECLASS = 5;
+	int PS_OBJECT__REFERRED_ECLASS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -256,7 +247,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PS_OBJECT__NAME = 6;
+	int PS_OBJECT__NAME = 5;
 
 	/**
 	 * The number of structural features of the '<em>PS Object</em>' class.
@@ -265,7 +256,7 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PS_OBJECT_FEATURE_COUNT = 7;
+	int PS_OBJECT_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>PS Object</em>' class.
@@ -397,13 +388,22 @@ public interface PartialmodelPackage extends EPackage {
 	int VAR_TYPE__ANNOTATION = PS_TYPE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VAR_TYPE__ID = PS_TYPE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Var Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VAR_TYPE_FEATURE_COUNT = PS_TYPE_FEATURE_COUNT + 1;
+	int VAR_TYPE_FEATURE_COUNT = PS_TYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Var Type</em>' class.
@@ -1098,17 +1098,6 @@ public interface PartialmodelPackage extends EPackage {
 	EReference getPSObject_Attributes();
 
 	/**
-	 * Returns the meta object for the attribute '{@link partialmodel.PSObject#getTypeName <em>Type Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type Name</em>'.
-	 * @see partialmodel.PSObject#getTypeName()
-	 * @see #getPSObject()
-	 * @generated
-	 */
-	EAttribute getPSObject_TypeName();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link partialmodel.PSObject#getPsType <em>Ps Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1236,6 +1225,17 @@ public interface PartialmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVarType_Annotation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link partialmodel.VarType#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see partialmodel.VarType#getId()
+	 * @see #getVarType()
+	 * @generated
+	 */
+	EAttribute getVarType_Id();
 
 	/**
 	 * Returns the meta object for class '{@link partialmodel.MayType <em>May Type</em>}'.
@@ -1569,14 +1569,6 @@ public interface PartialmodelPackage extends EPackage {
 		EReference PS_OBJECT__ATTRIBUTES = eINSTANCE.getPSObject_Attributes();
 
 		/**
-		 * The meta object literal for the '<em><b>Type Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PS_OBJECT__TYPE_NAME = eINSTANCE.getPSObject_TypeName();
-
-		/**
 		 * The meta object literal for the '<em><b>Ps Type</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1677,6 +1669,14 @@ public interface PartialmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VAR_TYPE__ANNOTATION = eINSTANCE.getVarType_Annotation();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VAR_TYPE__ID = eINSTANCE.getVarType_Id();
 
 		/**
 		 * The meta object literal for the '{@link partialmodel.impl.MayTypeImpl <em>May Type</em>}' class.

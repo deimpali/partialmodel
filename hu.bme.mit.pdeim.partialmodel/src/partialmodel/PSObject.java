@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link partialmodel.PSObject#getRefs <em>Refs</em>}</li>
  *   <li>{@link partialmodel.PSObject#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link partialmodel.PSObject#getTypeName <em>Type Name</em>}</li>
  *   <li>{@link partialmodel.PSObject#getPsType <em>Ps Type</em>}</li>
  *   <li>{@link partialmodel.PSObject#getPackageNsUri <em>Package Ns Uri</em>}</li>
  *   <li>{@link partialmodel.PSObject#getReferredEClass <em>Referred EClass</em>}</li>
@@ -61,32 +60,6 @@ public interface PSObject extends EObject {
 	 * @generated
 	 */
 	EList<PSReferenceToAttribute> getAttributes();
-
-	/**
-	 * Returns the value of the '<em><b>Type Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type Name</em>' attribute.
-	 * @see #setTypeName(String)
-	 * @see partialmodel.PartialmodelPackage#getPSObject_TypeName()
-	 * @model
-	 * @generated
-	 */
-	String getTypeName();
-
-	/**
-	 * Sets the value of the '{@link partialmodel.PSObject#getTypeName <em>Type Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type Name</em>' attribute.
-	 * @see #getTypeName()
-	 * @generated
-	 */
-	void setTypeName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Ps Type</b></em>' containment reference list.

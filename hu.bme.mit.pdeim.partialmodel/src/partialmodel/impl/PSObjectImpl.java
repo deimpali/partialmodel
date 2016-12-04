@@ -33,7 +33,6 @@ import partialmodel.PartialmodelPackage;
  * <ul>
  *   <li>{@link partialmodel.impl.PSObjectImpl#getRefs <em>Refs</em>}</li>
  *   <li>{@link partialmodel.impl.PSObjectImpl#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link partialmodel.impl.PSObjectImpl#getTypeName <em>Type Name</em>}</li>
  *   <li>{@link partialmodel.impl.PSObjectImpl#getPsType <em>Ps Type</em>}</li>
  *   <li>{@link partialmodel.impl.PSObjectImpl#getPackageNsUri <em>Package Ns Uri</em>}</li>
  *   <li>{@link partialmodel.impl.PSObjectImpl#getReferredEClass <em>Referred EClass</em>}</li>
@@ -62,26 +61,6 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 	 * @ordered
 	 */
 	protected EList<PSReferenceToAttribute> attributes;
-
-	/**
-	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypeName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypeName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String typeName = TYPE_NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getPsType() <em>Ps Type</em>}' containment reference list.
@@ -184,27 +163,6 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 			attributes = new EObjectContainmentEList<PSReferenceToAttribute>(PSReferenceToAttribute.class, this, PartialmodelPackage.PS_OBJECT__ATTRIBUTES);
 		}
 		return attributes;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTypeName() {
-		return typeName;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTypeName(String newTypeName) {
-		String oldTypeName = typeName;
-		typeName = newTypeName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PartialmodelPackage.PS_OBJECT__TYPE_NAME, oldTypeName, typeName));
 	}
 
 	/**
@@ -329,8 +287,6 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 				return getRefs();
 			case PartialmodelPackage.PS_OBJECT__ATTRIBUTES:
 				return getAttributes();
-			case PartialmodelPackage.PS_OBJECT__TYPE_NAME:
-				return getTypeName();
 			case PartialmodelPackage.PS_OBJECT__PS_TYPE:
 				return getPsType();
 			case PartialmodelPackage.PS_OBJECT__PACKAGE_NS_URI:
@@ -360,9 +316,6 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 			case PartialmodelPackage.PS_OBJECT__ATTRIBUTES:
 				getAttributes().clear();
 				getAttributes().addAll((Collection<? extends PSReferenceToAttribute>)newValue);
-				return;
-			case PartialmodelPackage.PS_OBJECT__TYPE_NAME:
-				setTypeName((String)newValue);
 				return;
 			case PartialmodelPackage.PS_OBJECT__PS_TYPE:
 				getPsType().clear();
@@ -395,9 +348,6 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 			case PartialmodelPackage.PS_OBJECT__ATTRIBUTES:
 				getAttributes().clear();
 				return;
-			case PartialmodelPackage.PS_OBJECT__TYPE_NAME:
-				setTypeName(TYPE_NAME_EDEFAULT);
-				return;
 			case PartialmodelPackage.PS_OBJECT__PS_TYPE:
 				getPsType().clear();
 				return;
@@ -426,8 +376,6 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 				return refs != null && !refs.isEmpty();
 			case PartialmodelPackage.PS_OBJECT__ATTRIBUTES:
 				return attributes != null && !attributes.isEmpty();
-			case PartialmodelPackage.PS_OBJECT__TYPE_NAME:
-				return TYPE_NAME_EDEFAULT == null ? typeName != null : !TYPE_NAME_EDEFAULT.equals(typeName);
 			case PartialmodelPackage.PS_OBJECT__PS_TYPE:
 				return psType != null && !psType.isEmpty();
 			case PartialmodelPackage.PS_OBJECT__PACKAGE_NS_URI:
@@ -450,9 +398,7 @@ public class PSObjectImpl extends MinimalEObjectImpl.Container implements PSObje
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (typeName: ");
-		result.append(typeName);
-		result.append(", packageNsUri: ");
+		result.append(" (packageNsUri: ");
 		result.append(packageNsUri);
 		result.append(", name: ");
 		result.append(name);

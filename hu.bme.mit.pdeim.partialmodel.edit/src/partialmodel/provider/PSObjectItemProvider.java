@@ -63,34 +63,11 @@ public class PSObjectItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTypeNamePropertyDescriptor(object);
 			addPackageNsUriPropertyDescriptor(object);
 			addReferredEClassPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Type Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTypeNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PSObject_typeName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PSObject_typeName_feature", "_UI_PSObject_type"),
-				 PartialmodelPackage.Literals.PS_OBJECT__TYPE_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -229,7 +206,6 @@ public class PSObjectItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PSObject.class)) {
-			case PartialmodelPackage.PS_OBJECT__TYPE_NAME:
 			case PartialmodelPackage.PS_OBJECT__PACKAGE_NS_URI:
 			case PartialmodelPackage.PS_OBJECT__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

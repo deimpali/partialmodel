@@ -21,7 +21,6 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//PSReferenceToAttribute" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="psType" upperBound="3"
         eType="#//PSType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="packageNsUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -40,6 +39,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VarType" eSuperTypes="#//PSType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Annotation" eType="#//Var"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MayType" eSuperTypes="#//PSType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Annotation" eType="#//May"/>

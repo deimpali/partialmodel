@@ -15,7 +15,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import partialmodel.PartialmodelPackage;
-import partialmodel.Var;
 import partialmodel.VarType;
 
 /**
@@ -47,6 +46,7 @@ public class VarTypeItemProvider extends PSTypeItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addAnnotationPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -74,6 +74,28 @@ public class VarTypeItemProvider extends PSTypeItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_VarType_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VarType_id_feature", "_UI_VarType_type"),
+				 PartialmodelPackage.Literals.VAR_TYPE__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns VarType.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,11 +114,8 @@ public class VarTypeItemProvider extends PSTypeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		Var labelValue = ((VarType)object).getAnnotation();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_VarType_type") :
-			getString("_UI_VarType_type") + " " + label;
+		VarType varType = (VarType)object;
+		return getString("_UI_VarType_type") + " " + varType.getId();
 	}
 	
 
@@ -113,6 +132,7 @@ public class VarTypeItemProvider extends PSTypeItemProvider {
 
 		switch (notification.getFeatureID(VarType.class)) {
 			case PartialmodelPackage.VAR_TYPE__ANNOTATION:
+			case PartialmodelPackage.VAR_TYPE__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

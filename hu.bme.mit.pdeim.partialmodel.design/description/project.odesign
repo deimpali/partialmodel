@@ -5,7 +5,7 @@
       <defaultLayer name="Default">
         <nodeMappings name="attribute" deletionDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Attribute']" labelDirectEdit="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editAttributeType']" semanticCandidatesExpression="[objects.attributes->addAll(AllAttributes)/]" domainClass="partialmodel.PSAttribute">
           <borderedNodeMappings name="partialityForAttribute" semanticCandidatesExpression="feature:psType" doubleClickDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='attribute%20pstype']" domainClass="partialmodel.PSType">
-            <style xsi:type="style:SquareDescription" labelExpression="aql:self.eGet('Annotation')" labelPosition="node" resizeKind="NSEW" width="8" height="2">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.eGet('Annotation')" labelPosition="node" resizeKind="NSEW" width="8" height="2">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <forbiddenSides>SOUTH</forbiddenSides>
@@ -14,7 +14,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:SquareDescription" labelExpression="aql: 'Type: ' + self.type" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql: 'Type: ' + self.type" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -84,9 +84,9 @@
             </style>
           </conditionnalStyles>
         </edgeMappings>
-        <containerMappings name="object" labelDirectEdit="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='objectName']" semanticCandidatesExpression="feature:objects" domainClass="partialmodel.PSObject" childrenPresentation="List">
+        <containerMappings name="object" deletionDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ObjectAndRefs']" labelDirectEdit="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='objectName']" semanticCandidatesExpression="feature:objects" domainClass="partialmodel.PSObject" childrenPresentation="List">
           <borderedNodeMappings name="partailityForObj" semanticCandidatesExpression="feature:psType" doubleClickDescription="//@ownedViewpoints[name='partialmodels']/@ownedRepresentations[name='PartialModel%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='object%20pstype']" domainClass="partialmodel.PSType">
-            <style xsi:type="style:SquareDescription" labelExpression="aql:self.eGet('Annotation')" labelPosition="node" resizeKind="NSEW" width="8" height="2">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.eGet('Annotation')" labelPosition="node" resizeKind="NSEW" width="8" height="2">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <forbiddenSides>SOUTH</forbiddenSides>
@@ -95,7 +95,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" roundedCorner="true">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" roundedCorner="true">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
@@ -360,6 +360,27 @@
                     <subModelOperations xsi:type="tool_1:RemoveElement"/>
                   </subModelOperations>
                 </cases>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="ObjectAndRefs">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
+                  <subModelOperations xsi:type="tool_1:For" expression="aql: self.objects" iteratorName="obj">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:obj">
+                      <subModelOperations xsi:type="tool_1:For" expression="aql: self.refs" iteratorName="ref">
+                        <subModelOperations xsi:type="tool_1:If" conditionExpression="aql: ref.targetObject = element">
+                          <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
