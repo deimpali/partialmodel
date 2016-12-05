@@ -568,6 +568,15 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPSOtherAttribute_Value() {
+		return (EAttribute)psOtherAttributeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPSReferenceToObject() {
 		return psReferenceToObjectEClass;
 	}
@@ -703,6 +712,7 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 
 		psOtherAttributeEClass = createEClass(PS_OTHER_ATTRIBUTE);
 		createEReference(psOtherAttributeEClass, PS_OTHER_ATTRIBUTE__REFFERED_CLASS);
+		createEAttribute(psOtherAttributeEClass, PS_OTHER_ATTRIBUTE__VALUE);
 
 		psReferenceToObjectEClass = createEClass(PS_REFERENCE_TO_OBJECT);
 		createEReference(psReferenceToObjectEClass, PS_REFERENCE_TO_OBJECT__TARGET_OBJECT);
@@ -807,6 +817,7 @@ public class PartialmodelPackageImpl extends EPackageImpl implements Partialmode
 
 		initEClass(psOtherAttributeEClass, PSOtherAttribute.class, "PSOtherAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPSOtherAttribute_RefferedClass(), theEcorePackage.getEClass(), null, "refferedClass", null, 0, 1, PSOtherAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPSOtherAttribute_Value(), ecorePackage.getEString(), "value", null, 0, 1, PSOtherAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(psReferenceToObjectEClass, PSReferenceToObject.class, "PSReferenceToObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPSReferenceToObject_TargetObject(), this.getPSObject(), null, "targetObject", null, 0, 1, PSReferenceToObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

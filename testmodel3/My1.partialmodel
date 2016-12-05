@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <partialmodel:PartialModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:partialmodel="http://www.example.org/partialmodel">
-  <objects name="object1">
-    <attributes xsi:type="partialmodel:Other" type="cc">
-      <psType xsi:type="partialmodel:MayType"/>
-    </attributes>
-    <attributes xsi:type="partialmodel:Other" type="hjh"/>
-    <psType xsi:type="partialmodel:AbsType" Annotation="Set"/>
-  </objects>
   <objects name="object2">
-    <refs targetObject="//@objects.0" type="" name="cica" sourceObject="//@objects.1">
-      <psType xsi:type="partialmodel:MayType"/>
-      <psType xsi:type="partialmodel:VarType" Annotation="Variable"/>
-      <psType xsi:type="partialmodel:AbsType"/>
-    </refs>
-    <refs targetObject="//@objects.3" type="inheritance" name="ref2" sourceObject="//@objects.1">
-      <psType xsi:type="partialmodel:MayType"/>
-    </refs>
-    <refs targetObject="//@objects.2" name="ref3" sourceObject="//@objects.1"/>
+    <refs name="ref1" sourceObject="//@objects.0" targetObject="//@objects.2"/>
+    <attributes name="attr1" sourceObject="//@objects.0" targetAttribute="//@AllAttributes.1"/>
+    <psType xsi:type="partialmodel:AbsType" parent="//@objects.0" Annotation="Set"/>
   </objects>
-  <objects name="object3">
-    <attributes xsi:type="partialmodel:Other" type="ss"/>
-    <psType xsi:type="partialmodel:MayType"/>
-    <psType xsi:type="partialmodel:VarType"/>
+  <objects name="object1">
+    <refs name="ref1" sourceObject="//@objects.1" targetObject="//@objects.0"/>
   </objects>
-  <objects name="object4"/>
-  <objects name="object5"/>
+  <objects name="object3"/>
+  <AllAttributes xsi:type="partialmodel:PSOtherAttribute" type="typeName"/>
+  <AllAttributes xsi:type="partialmodel:PSOtherAttribute" type="String" references="//@objects.0/@attributes.0" value="PSAttribute1"/>
 </partialmodel:PartialModel>

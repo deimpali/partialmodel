@@ -745,13 +745,22 @@ public interface PartialmodelPackage extends EPackage {
 	int PS_OTHER_ATTRIBUTE__REFFERED_CLASS = PS_ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PS_OTHER_ATTRIBUTE__VALUE = PS_ATTRIBUTE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>PS Other Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PS_OTHER_ATTRIBUTE_FEATURE_COUNT = PS_ATTRIBUTE_FEATURE_COUNT + 1;
+	int PS_OTHER_ATTRIBUTE_FEATURE_COUNT = PS_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>PS Other Attribute</em>' class.
@@ -1364,6 +1373,17 @@ public interface PartialmodelPackage extends EPackage {
 	EReference getPSOtherAttribute_RefferedClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link partialmodel.PSOtherAttribute#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see partialmodel.PSOtherAttribute#getValue()
+	 * @see #getPSOtherAttribute()
+	 * @generated
+	 */
+	EAttribute getPSOtherAttribute_Value();
+
+	/**
 	 * Returns the meta object for class '{@link partialmodel.PSReferenceToObject <em>PS Reference To Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1785,6 +1805,14 @@ public interface PartialmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PS_OTHER_ATTRIBUTE__REFFERED_CLASS = eINSTANCE.getPSOtherAttribute_RefferedClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PS_OTHER_ATTRIBUTE__VALUE = eINSTANCE.getPSOtherAttribute_Value();
 
 		/**
 		 * The meta object literal for the '{@link partialmodel.impl.PSReferenceToObjectImpl <em>PS Reference To Object</em>}' class.
